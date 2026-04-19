@@ -8,7 +8,7 @@
 ```
 
 **Expected output:**
-List all five presets with one-sentence descriptions. Offer to explain any of them in more detail.
+List all six presets with one-sentence descriptions. Offer to explain any of them in more detail.
 
 ---
 

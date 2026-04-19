@@ -71,6 +71,14 @@ Signs:
 - hedged conclusions that do not commit to what the evidence supports
 - refusing to name a recommendation when one exists
 
+## Extended pattern reference
+
+For vocabulary clusters, pattern stacking, grammar-level tells, promotional language patterns, and the principle of treating clusters as single strong signals, see:
+
+`docs/anti-ai-guidelines.md`
+
+Apply those patterns as part of this audit pass. The audit is not only about structural or tonal problems — dense AI vocabulary in a single paragraph is also a concrete problem to name.
+
 ## Output
 
 Produce a short, specific list of what is wrong. Not categories — examples.

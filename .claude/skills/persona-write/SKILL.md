@@ -48,6 +48,36 @@ Do not use this skill when the user only wants:
 - detector evasion
 - a full large-document rewrite in one pass
 
+## Multi-persona chain mode
+
+When the user provides more than one persona, interpret them as an ordered chain.
+
+Accepted formats:
+- `sharp-technical -> problem-first-marketer`
+- `sharp-technical, problem-first-marketer`
+- natural language: "write as a sharp technical person, then review as a problem-first marketer"
+
+### Chain semantics
+
+- **First persona owns the text.** It writes or rewrites the draft.
+- **Every following persona is a reviewer.** It does not become a co-author.
+- **Reviewers run a two-step process** — no user permission required:
+  1. Identify problems from their perspective (what is off, unclear, misframed, wrong for the audience)
+  2. Apply surgical fixes — sentence-level, paragraph-level, local framing, targeted cuts or additions
+- **Reviewers must not** rewrite the whole piece in their own voice, replace the owner persona, or flatten the text into generic prose.
+- **After all reviewers finish, the owner persona runs a mandatory final reconciliation pass.** This pass smooths seams, restores the owner's voice where it was displaced, preserves useful reviewer improvements, and ensures the final text reads as one coherent piece.
+- **Final output should still primarily sound like the first persona.**
+
+For multiple reviewers, apply them in order. Each reviewer reads what the previous one produced.
+
+Example — three-persona chain:
+1. `sharp-technical` writes
+2. `clear-teacher` reviews and applies surgical fixes
+3. `problem-first-marketer` reviews and applies surgical fixes
+4. `sharp-technical` runs the final reconciliation pass
+
+→ Full details: `docs/persona-chain-mode.md`
+
 ## Main user flow
 
 ### If the user already gave a persona
@@ -236,8 +266,18 @@ Preset persona definitions are in:
 - `personas/clear-teacher.md`
 - `personas/skeptical-analyst.md`
 - `personas/blunt-operator.md`
+- `personas/problem-first-marketer.md`
 
 ## Supporting modules
+
+### Docs
+- `docs/persona-chain-mode.md`
+- `docs/anti-ai-guidelines.md`
+- `docs/pipeline.md`
+- `docs/longform-mode.md`
+- `docs/simple-usage.md`
+- `docs/philosophy.md`
+- `docs/contributor-guide.md`
 
 ### Passes
 - `passes/intent-extraction.md`

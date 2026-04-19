@@ -12,13 +12,45 @@ How to use Persona Write without reading anything else first.
 If you leave out the persona, the skill will ask you to choose one.
 If you leave out the mode, it will infer it from your text.
 
-## The five preset personas
+## Multi-persona chains (V2)
+
+You can give more than one persona. The first one owns the text. The rest are reviewers.
+
+```
+/persona-write sharp-technical -> problem-first-marketer:
+[paste text]
+```
+
+The skill will:
+1. rewrite as `sharp-technical`
+2. have `problem-first-marketer` review and apply targeted improvements
+3. have `sharp-technical` run a final reconciliation pass
+4. return output that still reads primarily as `sharp-technical`
+
+You can also use commas or plain language:
+
+```
+/persona-write sharp-technical, clear-teacher:
+[paste text]
+```
+
+```
+/persona-write: write this as a sharp technical writer, then have a clear teacher review it
+[paste text]
+```
+
+Three personas work the same way — first writes, second reviews, third reviews, first reconciles.
+
+→ See `docs/persona-chain-mode.md` for full details and pairing recommendations.
+
+## The preset personas
 
 - **sharp-technical** — direct, concise, technical
 - **pragmatic-builder** — practical, implementation-minded
 - **clear-teacher** — explanatory without fluff
 - **skeptical-analyst** — careful, evidence-aware
 - **blunt-operator** — very direct, minimal ceremony
+- **problem-first-marketer** — problem-first, audience-oriented, earns attention before asking for action
 
 Not sure which to pick? Run `/persona-list` and it will explain them.
 

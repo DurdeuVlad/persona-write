@@ -65,6 +65,44 @@ Only output text that passes this check.
 
 ---
 
+## Multi-persona chain pipeline
+
+When the user provides more than one persona, the pipeline extends to include reviewer passes and a final owner reconciliation.
+
+### Chain execution order
+
+1. **Owner persona drafts or rewrites** — runs the standard short-text pipeline
+2. **Each reviewer persona runs in order** — for each reviewer:
+   - Step A: identify problems from that persona's perspective
+   - Step B: apply surgical fixes (no user permission required)
+3. **Owner persona runs a final reconciliation pass** — smooths seams, restores voice, preserves useful reviewer improvements
+
+The final reconciliation pass is mandatory. It is not an optional polish step.
+
+### Reviewer constraints
+
+Each reviewer must:
+- identify specific problems (not generic feedback)
+- apply targeted changes at sentence, paragraph, or local framing level
+- preserve the owner persona's voice where it is working
+- not rewrite the whole piece in their own voice
+- not flatten the text toward generic prose
+
+### Chain with long-form documents
+
+For long documents, the chain applies per chapter:
+1. Owner drafts/rewrites the chapter
+2. Each reviewer reviews and applies fixes to that chapter
+3. Owner runs a reconciliation pass on the chapter
+4. Chapter memory is written
+5. Revision tickets created if needed
+
+At the whole-document level, the owner runs a final whole-document reconciliation after all sections are complete.
+
+→ Full details: `docs/persona-chain-mode.md`
+
+---
+
 ## Long-form pipeline
 
 ### Stage 0: Global brief (`longform/global-brief.md`)

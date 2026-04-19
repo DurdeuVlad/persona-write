@@ -75,6 +75,34 @@ For long-form work, output is Markdown files:
 
 The working files let the user see what decisions were made and intervene at any point.
 
+## Multi-persona chains in long-form mode
+
+When a persona chain is active, the same chain logic applies at the chapter level and at the whole-document level.
+
+### Per chapter
+
+For each chapter, after the owner persona completes its section rewrite:
+
+1. Each reviewer persona reviews the chapter in order
+2. Each reviewer identifies problems from their perspective and applies surgical fixes
+3. The owner persona runs a final reconciliation pass on that chapter
+4. Chapter memory is written with the outcome of all passes
+5. Revision tickets are created if needed
+
+The chapter memory should reflect the state after reconciliation — the owner's voice, not the reviewers'.
+
+### Whole-document level
+
+After all chapters are complete:
+
+1. Reviewers may contribute consistency or framing observations for the whole document
+2. The owner persona runs the whole-document reconciliation pass, which includes resolving consistency issues across reviewer passes
+3. The consistency pass (`longform/consistency-pass.md`) applies as usual, with the owner's voice as the reference
+
+### What does not change
+
+The global brief, document map, chapter memory structure, and revision ticket system remain the same. The chain behavior is layered on top of the existing section-by-section workflow, not a replacement for it.
+
 ## Intervening mid-process
 
 The user can intervene between sections or after the consistency pass.

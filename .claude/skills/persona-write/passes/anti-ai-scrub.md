@@ -71,6 +71,14 @@ Do not introduce fake human signals:
 
 These are not human texture. They are a different kind of performance.
 
+## Extended pattern reference
+
+For vocabulary clusters, grammar-level tells, pattern stacking, and the concept of treating clusters as single strong signals, see:
+
+`docs/anti-ai-guidelines.md`
+
+That document is the shared reference for all passes and for `persona-review`. Use it alongside the patterns above, not instead of them.
+
 ## Output
 
 Return the scrubbed version with the changed passages noted if the changes are substantial.
