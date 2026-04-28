@@ -2,7 +2,7 @@
 
 The internal processing pipeline for Persona Write.
 
-Scratch use is **conditional** — see `../SKILL.md` "Scratch folder & Pipeline traceability" and `voice-guide.md`. Default for short text is in-memory. Long-form, `persona-copy` analysis, and tasks where the user asks for the analysis to be saved use the scratch folder.
+Scratch use is **length-driven** — see `../SKILL.md` "Scratch folder & Pipeline traceability" and `voice-guide.md`. Target ≤ 600 words runs in-memory; target > 600 words runs in scratch. Long-form and `persona-copy` always use scratch. The cornerstone principle is in `philosophy.md`.
 
 When scratch is in use, the file naming convention below applies. When in-memory, the same passes run, but no `.md` files are materialized — the result is returned inline.
 

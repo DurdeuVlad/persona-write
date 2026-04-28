@@ -1,5 +1,20 @@
 # Philosophy
 
+## Cornerstone
+
+**Writing quality is a positive-shape problem, not a negative-shape one.**
+
+Telling a model *who to be* produces a specific writer. Telling a model *what not to be* produces a defensive, compressed, generic anti-AI register where every persona collapses toward the same flat voice.
+
+Everything in this project follows from that one claim:
+
+- Personas are defined by **positive shape** — Identity, Attention, Stance, Rhythm, Stylometric Signature, Lexical Shunts, opener inventory, persona-specific Taboo patterns *as character traits*.
+- The pipeline runs **persona-fit checks**, not anti-AI scrubs. There is no global ban-list applied to the prose. The persona file is the filter.
+- The dictionaries (`dictionaries/ai-patterns.md`, `banned-phrases.md`, `manager-speak.md`, `docs/anti-ai-guidelines.md`) are reference-only artifacts for *teaching* why generic AI prose fails. They are not pipeline inputs.
+- New skills, new passes, and new personas must be expressible as positive-shape additions. If a proposal is shaped as "the writer should avoid X," it has to be re-expressed as "the writer is the kind of person who Y" before it earns its place.
+
+This principle was empirically validated in two cross-model pilots; see `voice-guide.md` for the evidence.
+
 ## The problem this is solving
 
 Most AI writing fails for structural reasons, not surface ones.
@@ -72,3 +87,13 @@ Real human texture is not the presence of errors. It is the presence of mind. A 
 Writing that sounds like a specific kind of person made choices about what to say and how.
 
 Not writing that sounds like nobody. Not writing that sounds like everyone. Writing that sounds like someone.
+
+## How this principle is enforced
+
+When evaluating any change to this project — new pass, new dictionary, new doc, new persona — apply this test:
+
+1. **Is the change expressed as a positive shape** ("the writer is the kind of person who…") rather than a negative one ("the writer should avoid…")?
+2. **Does the change live inside a persona file**, where it can be calibrated to a specific writer, rather than as a global rule applied to all prose?
+3. **Does the change preserve the model's attention budget for the persona's positive shape**, instead of consuming it with monitoring against a generic list?
+
+If the answer to any of these is *no*, the change has to be re-shaped before it ships. The dictionaries failed all three tests in v2.1.0 — that is why they were demoted in v2.2.0.

@@ -24,10 +24,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `docs/writing-quality-rubric.md` Voice and Word Choice diagnostics updated to reference each persona's positive shape (Lexical Shunts, Stylometric Signature, Taboo patterns) instead of `dictionaries/ai-patterns.md`.
 - `persona-copy/pipeline.md` Pass 9 changed from "anti-AI scrub" to "voice coherence against the extracted persona" — calibrated against the source author's positive shape.
 - `persona-review/SKILL.md` and `docs/review-principles.md` updated to frame review through the owner persona's positive shape, not a global anti-AI checklist.
-- Scratch folder usage made **conditional**:
-  - **In-memory** is now the default for short text. The model holds intermediate state in working memory; serialising and re-reading attenuates persona commitment.
-  - **Scratch required** for long-form (chapter memory does durable work) and `persona-copy` analysis the user wants saved.
-  - **Scratch on request** for short text where the user wants the analysis saved.
+- Scratch folder usage made **length-driven** (replaces the earlier "conditional / on request" framing):
+  - **≤ 600 words (≈ 1–2 pages):** in-memory. Default.
+  - **> 600 words:** scratch required. The state exceeds one working window; materializing each pass keeps the persona stable.
+  - **Long-form (multi-section, > 2000 words):** scratch with chapter workflow.
+  - **`/persona-copy` analysis:** scratch always.
+- New `docs/philosophy.md` "Cornerstone" section: **writing quality is a positive-shape problem, not a negative-shape one.** This is now the project's organizing principle and the test every new pass, dictionary, doc, or persona has to pass before shipping. Linked from `SKILL.md`, `README.md`, `pipeline.md`, and `output-handling.md`.
+- Cross-model validation (Gemini × `clear-teacher`) added in `scratch/2026-04-28-gemini-validation/`. Confirms the headline result on a different model and a very different persona, and surfaces a persona-type-dependent failure mode (terse personas → length collapse; explanatory personas → vocabulary thinning + Taboo leakage). `voice-guide.md` updated with this finding.
 - `passes/refine.md`, `longform/chapter-workflow.md`, `examples/rewrite.md`, `examples/quickstart.md`, `docs/pipeline.md`, `docs/output-handling.md` updated to reference the new pass names and conditional-scratch model.
 
 ### Personas

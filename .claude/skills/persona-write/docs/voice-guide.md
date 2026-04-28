@@ -90,9 +90,14 @@ If the output drifts away from the persona's voice (mean sentence length wrong, 
 
 A separate finding from the same pilot: scratch step files help when context cannot hold the task and hurt slightly when it can.
 
-- **Short text (< 1000 words):** prefer in-memory. The passes are fast and the model holds them naturally.
-- **Long-form (multi-section, > 2000 words):** keep scratch. Chapter memory and revision tickets do durable work that exceeds the working window.
-- **`persona-copy` analysis:** keep scratch when the user wants the persona file or the verification report saved. In-memory is fine for one-off reproductions.
+The rule, as shipped:
+
+- **≤ 600 words (≈ 1–2 pages):** in-memory. The passes are fast and the model holds them naturally.
+- **> 600 words:** scratch. The state exceeds one working window; materializing each pass keeps the persona stable across the longer arc.
+- **Long-form (multi-section, > 2000 words):** scratch with chapter workflow. Chapter memory and revision tickets do durable work.
+- **`persona-copy` analysis:** scratch always. Extracted persona files and verification reports are saved artifacts by definition.
+
+The 600-word threshold is calibrated to the model's working window for a single short-task pipeline (intent → audit → mapping → draft → coherence → refine → fidelity). Beyond that, the early passes start to fade by the time the late passes run, and the persona drifts. Scratch puts each pass in front of the model again at read time and the persona stays committed.
 
 The principle: **scratch files are durable memory, not virtuous traceability.** Use them when memory is needed. Skip them when it is not.
 

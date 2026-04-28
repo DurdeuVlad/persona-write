@@ -20,6 +20,7 @@ The goal is writing shaped by a specific attention model, compression level, and
 
 ## Core rules
 
+- **Positive shape over negative shape.** Voice work means executing the persona's positive signature, not avoiding a global ban-list. See `docs/philosophy.md`.
 - Persona comes first.
 - Preserve meaning before style.
 - Default to concise, clear writing.
@@ -32,25 +33,30 @@ The goal is writing shaped by a specific attention model, compression level, and
 
 ## Scratch folder & Pipeline traceability
 
-Scratch files are **durable memory**, not virtuous traceability. Use them when memory is needed for the task. Skip them when the model already holds the context.
+Scratch files are **durable memory**, not virtuous traceability. The mode is decided by length and task type, not by user request.
 
-### When to use the scratch folder
+### Two modes
 
-- **Long-form work** (multi-section documents, > ~2000 words). The chapter-memory artifacts and revision tickets are doing real work that exceeds a single working window. **Required.**
-- **`/persona-copy` analysis the user wants saved** (extracted persona files, verification reports). **Required.**
-- **Short-text tasks where the user explicitly asks for the analysis to be saved.** Optional, on request.
+| Target output | Mode | Why |
+|---|---|---|
+| **≤ 600 words** (roughly 1–2 pages) | **In-memory** | The whole pipeline state fits in working memory. Serialization adds friction and loses cohesion. |
+| **> 600 words** | **Scratch** | The state exceeds one working window. Materializing each pass keeps the persona stable across the longer arc. |
+| **Long-form** (multi-section, > 2000 words) | **Scratch + chapter workflow** | Chapter memory and revision tickets do durable work. See `longform/`. |
+| **`/persona-copy` analysis** | **Scratch** | Extracted persona files and verification reports are saved artifacts by definition. |
 
-### When to skip the scratch folder
+Estimate target length from the user's brief. If the user explicitly asks for the analysis to be saved on a short task, switch to scratch on request.
 
-- **Short-text tasks (< ~1000 words)** where the user just wants the result. Run the passes in-context. The intermediate state is held in working memory, where it is more cohesive than after serialization-and-reread. **Default.**
+### In-memory mode
 
-### When you do use scratch
+Run all passes in-context. Return the result inline with a one or two sentence note on the main adjustments. No folder is created.
+
+### Scratch mode
 
 1. **Create a task folder:** `scratch/YYYY-MM-DD-[task-slug]/`
 2. **Record each pass to its own numbered `.md` file:** `01-intent.md`, `02-audit.md`, `03-mapping.md`, `04-draft.md`, `05-coherence.md`, `06-refine.md`, `07-fidelity.md`, `final.md`.
 3. The scratch folder is gitignored.
 
-The reasoning behind making scratch conditional, with experimental evidence, is in `docs/voice-guide.md`.
+The reasoning, with cross-model experimental evidence, is in `docs/voice-guide.md`. The underlying principle is in `docs/philosophy.md`.
 
 ## When to use this skill
 

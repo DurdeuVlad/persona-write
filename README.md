@@ -24,6 +24,16 @@ Persona Write gives Claude Code a real working persona — not a style hint, but
 
 ---
 
+## Cornerstone principle
+
+> **Writing quality is a positive-shape problem, not a negative-shape one.**
+>
+> Telling a model *who to be* produces a specific writer. Telling a model *what not to be* produces a defensive, generic anti-AI register where every persona collapses toward the same flat voice.
+
+Everything in this project follows from that claim — the pipeline runs persona-fit checks, not anti-AI scrubs; the dictionaries are reference-only; new contributions must be expressible as positive shape. Validated across two cross-model pilots. Full reasoning in [`philosophy.md`](.claude/skills/persona-write/docs/philosophy.md) and [`voice-guide.md`](.claude/skills/persona-write/docs/voice-guide.md).
+
+---
+
 ## What you get
 
 A Claude Code skill set with five commands:
@@ -174,7 +184,14 @@ Final output reads as the first persona's work. Reviewers improve it; they do no
 | Refine | Tighten, fix rhythm |
 | Fidelity check | Meaning and nuance survived |
 
-The pipeline runs **in-memory by default** for short text. Scratch folders are used for long-form work, `persona-copy` analysis, and on request — see [`voice-guide.md`](.claude/skills/persona-write/docs/voice-guide.md) for why this matters.
+The pipeline has two modes, decided by length:
+
+- **≤ 600 words (≈ 1–2 pages):** in-memory — the result is returned inline.
+- **> 600 words:** scratch — each pass is written to its own file in `scratch/YYYY-MM-DD-[task-slug]/`.
+- **Long-form (multi-section, > 2000 words):** scratch with chapter workflow.
+- **`/persona-copy` analysis:** scratch.
+
+Why length-driven and not always-on: see [`voice-guide.md`](.claude/skills/persona-write/docs/voice-guide.md) for the empirical evidence.
 
 ### Long-form — section by section
 
