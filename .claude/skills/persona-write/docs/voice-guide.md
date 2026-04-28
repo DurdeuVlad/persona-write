@@ -53,11 +53,24 @@ If you want a persona to sound like a person, **do not ask the model to think ab
 
 ## Why the negative framing fails
 
-Three reasons, supported by the pilot:
+Three reasons, supported by the pilots:
 
 1. **The white-bear effect.** Telling the model "do not write `delve`" puts `delve` in the working context.
 2. **Defensive compression.** The model removes anything resembling a flagged pattern even when the pattern is doing legitimate work. Em-dashes get cut. Section labels lose their natural language. Paragraph rhythm flattens.
 3. **Persona drift toward a homogenized anti-AI register.** Every persona ends up reading the same — short, clipped, fragment-heavy. The persona's actual signature is overwritten.
+
+## How scrub fails depends on the persona
+
+A second pilot — Gemini × `clear-teacher` — confirmed the headline result (no-scrub wins on every condition) but revealed that the *shape* of the failure depends on which positive-shape feature is most diagnostic for the persona.
+
+| Persona type | Scrub failure mode |
+|---|---|
+| **Terse / compressed** (sharp-technical, blunt-operator) | Sentence-length collapse. Mean SL drops to half the persona's target. Persona becomes a parody — clipped where it should have breath. |
+| **Explanatory / engagement-rich** (clear-teacher, problem-first-marketer) | Lexical Shunt absence + opener-inventory miss + Taboo leakage. The persona's named openers (`Imagine…`, `Suppose…`, `Here's the idea:`) go missing. Generic explainer prose fills the gap. The persona's specific Taboo entries (`simply`, `just`) leak through *more* than they would without the scrub, because the scrub's exhaustive generic ban-list consumes the model's monitoring budget and the persona's targeted Taboo list gets drowned in noise. |
+
+Same root cause — attention stolen from the persona's positive shape — expressed differently because different personas live in different parts of the stylometric space.
+
+The diagnostic is the same in both cases: the persona's positive shape (Identity, Rhythm, Stylometric Signature, named Lexical Shunts, opener inventory, persona-specific Taboo patterns) is what does the actual filtering. The dictionaries cannot replace the persona file because they cannot be calibrated to the specific writer.
 
 ## Why positive framing works
 
