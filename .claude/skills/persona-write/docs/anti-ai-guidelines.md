@@ -1,8 +1,12 @@
-# Authentic Voice Guidelines
+# Authentic Voice Guidelines — reference only
 
-Shared guidance for producing writing that sounds like a specific person, not an average of training data.
+> **This file is reference material, not a pipeline input.** The active guidance is in `voice-guide.md`. The patterns and clusters catalogued below are useful background for contributors writing or refining personas; they are *not* a checklist applied by the model during writing or audit.
+>
+> Why: asking the model to think about generic AI patterns triggers defensive compression that drifts the prose away from the persona's natural rhythm. The pipeline now relies on each persona's positive shape (Identity, Rhythm, Stylometric Signature, Taboo patterns) instead. See `voice-guide.md` for the experimental evidence behind this change.
 
-The goal is **authenticity**, not detector evasion. When a voice is authentic, it naturally breaks the statistical patterns of "generic assistant" prose. 
+Shared background on patterns common in generic AI prose. Use this when shaping a new persona's Taboo patterns or Stylometric Signature, not as a runtime checklist.
+
+The goal of every persona is **authenticity** — voice that follows from a specific implied author. When a voice is authentic, it naturally breaks the statistical patterns of "generic assistant" prose without the writer having to monitor against them. 
 
 ---
 

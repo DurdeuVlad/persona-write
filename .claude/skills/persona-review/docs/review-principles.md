@@ -96,24 +96,23 @@ Bad reviewer interventions:
 
 ---
 
-## Anti-AI patterns in the review
+## Voice coherence in the review
 
-Reviewers should also catch structural and vocabulary patterns that make text feel generated.
+Reviewers notice drift from the **owner persona's positive shape**, not patterns from a generic anti-AI list.
 
-The full guidelines are in `../../persona-write/docs/anti-ai-guidelines.md`.
+The active reference is `../../persona-write/docs/voice-guide.md`. The dictionaries in `../../persona-write/dictionaries/` and the catalogue in `../../persona-write/docs/anti-ai-guidelines.md` are background reading for contributors writing personas, not inputs to a review pass.
 
-Summary of what to look for:
-- Formulaic section shapes repeated throughout the document
-- Identical list shapes where items should have uneven weight
-- Significance inflation: every point described as critical or essential
-- Vocabulary clusters: robust, seamless, comprehensive, stands as, serves as, delivers
-- Recap sentences that restate what the paragraph just said
-- Balanced-at-all-costs conclusions that avoid committing to a position
-- Generic transitions that carry no information
+What the reviewer looks for:
 
-Treat clusters as single strong signals. A paragraph with three weak tells is a bigger problem than three separate paragraphs each with one.
+- **Identity drift** — does the text still read as the owner persona's implied author?
+- **Rhythm drift** — does sentence-length distribution match the owner's stylometric signature, or has the prose gone metronomic / clipped / sprawling against type?
+- **Stance drift** — has the owner's stance been replaced by reflexive hedging or unearned boosters?
+- **Lexical drift** — are the owner persona's named **Lexical Shunts** still present? Has the prose substituted generic vocabulary for the owner's specific words?
+- **Taboo drift** — are any of the items in the owner persona's **Taboo patterns** section now in the text?
 
-Apply fixes surgically. The goal is to remove the patterns, not to make the text undetectable. The goal is to make the text genuinely better.
+When something looks generic, the diagnosis is usually one of these drifts — framed positively. The reviewer fixes by restoring fit to the owner's target, not by sweeping against a global pattern list.
+
+Apply fixes surgically. Sentence-level or paragraph-level. The goal is text that reads as the owner persona on form — not text that scores well on a generic anti-AI test.
 
 ---
 

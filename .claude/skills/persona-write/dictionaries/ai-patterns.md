@@ -1,6 +1,10 @@
-# AI Patterns
+# AI Patterns — reference only
 
-Structural and rhythmic patterns common in AI-generated text. These are harder to catch than specific phrases because they operate at the level of document structure and sentence rhythm.
+> **This file is reference material, not a pipeline input.** Do not consult it during writing or audit. Asking the model to enumerate generic AI patterns to avoid produces defensive compression that drifts the prose *away* from the persona's natural rhythm (white-bear effect). See `../docs/voice-guide.md` for the experimental evidence.
+>
+> What this file is good for: contributors writing new personas — the patterns below name structural tells that are common in generic AI prose, useful as background reading when shaping a new persona's Stylometric Signature and Taboo patterns.
+
+Structural and rhythmic patterns common in AI-generated text. These are catalogued here because they operate at the level of document structure and sentence rhythm rather than at the phrase level.
 
 ## Symmetric paragraph structure
 

@@ -100,25 +100,27 @@ Every review task is processed through a task-specific scratch folder (e.g., `sc
 
 ---
 
-## Example 5: Anti-AI pass as reviewer
+## Example 5: Voice-coherence pass against an owner persona
 
 **Input:**
 ```
-/persona-review sharp-technical:
-[text already rewritten but still has AI-pattern residue]
+/persona-review sharp-technical [owner: sharp-technical]:
+[text drafted by sharp-technical but drifting into generic register]
 ```
 
-**What the reviewer targets (through its own lens):**
-- Vocabulary clusters: "robust," "seamlessly," "ensures alignment"
-- Significance inflation: every feature described as "critical"
-- Identical list shapes: five points, all the same length and grammatical form
-- Recap sentences at the end of each section
+**What the reviewer targets (through `sharp-technical`'s own positive shape):**
+- The opening sentence reads warm/agreement-seeking — sharp-technical's identity is calm-assured, not warm.
+- Mean sentence length sitting at 8 words across the middle section — under the persona's 13 ± 7 target. Several mechanism descriptions have been clipped where they needed breath.
+- "robust" and "ensures alignment" appear in para 4 — neither is in sharp-technical's named Lexical Shunts; both are in the persona's Taboo patterns.
+- Para 6 ends with a one-sentence summary of itself — sharp-technical does not summary-recap.
 
 **What the reviewer applies:**
-- Replaces inflated vocabulary with direct description
-- Cuts three of five list items to the two that actually matter
-- Removes recap sentences
-- Rewrites one paragraph that stacked four weak signals
+- Restarts the opening with a mechanism statement.
+- Restores two longer mechanism sentences in the middle section.
+- Replaces "robust" / "ensures alignment" with direct description.
+- Cuts the recap.
+
+The fixes are framed as restoration toward the persona's positive target, not as removal of generic AI tells.
 
 ---
 

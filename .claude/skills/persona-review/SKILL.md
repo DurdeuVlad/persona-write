@@ -92,9 +92,9 @@ From the reviewer persona's stance, identify:
 - where the owner persona overdid or underdid something
 - what is too dense, too soft, too vague, too cold, too polished, or too weak
 - where the argument, framing, or emphasis can improve
-- where AI patterns or structural tells reduce credibility
+- where the text drifts from the owner persona's positive shape (Identity, Rhythm, Stylometric Signature)
 
-Reference `docs/review-principles.md` and the shared anti-AI guidelines in the persona-write skill (`../persona-write/docs/anti-ai-guidelines.md`).
+Reference `docs/review-principles.md` and `../persona-write/docs/voice-guide.md`.
 
 ### Step 3: Apply surgical fixes (`03-revision-draft.md`)
 Make targeted changes directly. Do not ask permission first.
@@ -121,8 +121,8 @@ For substantial revisions, note which sections changed and what drove the change
 
 For useful combinations, see `docs/reviewer-pairings.md`.
 
-## Anti-AI guidelines
+## Voice coherence
 
-The reviewer should also catch structural and vocabulary patterns that make text feel generated.
+The reviewer notices drift from the owner persona's positive shape — Identity, Rhythm model, Stylometric Signature, Lexical Shunts, Taboo patterns. The check is fit to the owner's positive target, not enumeration of generic AI patterns.
 
-Reference: `docs/review-principles.md` and `../persona-write/docs/anti-ai-guidelines.md`.
+Reference: `docs/review-principles.md` and `../persona-write/docs/voice-guide.md`.

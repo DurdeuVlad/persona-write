@@ -2,97 +2,56 @@
 
 ## Purpose
 
-Identify specifically what is wrong with the text before rewriting it.
+Identify specifically what is wrong with the text relative to the persona before rewriting it.
 
 Rewriting without diagnosis produces different text that may have the same problems. The audit makes the problems visible so the rewrite can address them directly.
 
+This audit is **persona-fit only**. It does not enumerate generic AI patterns. The reason — and the evidence behind it — is in `docs/voice-guide.md`. Asking the model to think about anti-AI patterns triggers defensive compression that pushes the prose away from the persona's natural rhythm. The audit stays positive: *does this match the persona, and where does it drift?*
+
 ## What to check
 
-### Generic assistant tone
-Does the text sound like it was produced by an AI trying to sound helpful?
+### Persona drift
 
-Signs:
-- balanced, symmetrical sentence structure throughout
-- every claim softened to avoid seeming too direct
-- transitions that do the work of enthusiasm rather than logic
-- summary sentences at the end of every paragraph
-- filler at the beginning of every paragraph
+Compare the existing text against the persona's positive fields:
 
-### Filler and padding
-Is there content that takes up space without doing work?
+- **Identity drift** — does the implied author still match? Has the draft drifted toward a generic helpful-assistant register?
+- **Attention drift** — is the text attending to what the persona attends to (mechanism, problem, evidence, reader experience), or has it shifted focus?
+- **Compression drift** — is the persona's compression model preserved? Over-explanation in a persona that assumes competence, or under-explanation in a persona that builds shared context, are both drift signals.
+- **Stance drift** — does the text hold certainty the way the persona's stance model describes?
+- **Rhythm drift** — does sentence length, variation, and energy match the persona's rhythm model and stylometric signature?
 
-Patterns:
-- introductory clauses that restate what was just said
-- sentences that exist to transition rather than to communicate
-- closing sentences that summarize without adding
-- explanations of things the reader does not need explained
+### Argument and structure
 
-### Over-explanation
-Does the text explain what the reader already knows?
+- Is the key point landed where the persona would land it?
+- Is the argument shape consistent with the persona's reasoning preference (mechanism-first, example-first, tradeoff-first, narrative, problem-solution)?
+- Are sections earning their place, or is there padding?
 
-Signs:
-- definitions of common terms in a technical document
-- background context the audience has
-- explaining the purpose of something the reader is already using
-- walking through reasoning the reader can supply
+### Filler and over-explanation
 
-### Weak structure
-Is the argument or explanation organized clearly?
+These are character-judged, not pattern-judged:
+- Is there content that takes space without doing work *for this persona's reader*? (A `clear-teacher` reader needs more setup than a `sharp-technical` reader. The same paragraph can be filler in one and load-bearing in the other.)
+- Does the text define terms the persona's audience already knows?
+- Does the text walk through reasoning the persona's audience can supply?
 
-Problems:
-- key point buried in the middle or end
-- setup and conclusion mismatched
-- repetition of the same point in different words
-- sections that do not earn their place
+### Taboo patterns (persona-specific)
 
-### Corporate or managerial sludge
-Does the text use language that sounds official but communicates nothing?
-
-Signs:
-- leverage, synergy, alignment, bandwidth, visibility
-- "ensure alignment with stakeholder expectations"
-- any noun phrase where a verb would be clearer
-- passive voice used to avoid assigning responsibility
-
-### Voice flatness
-Does every sentence read at the same register and energy level?
-
-Signs:
-- consistent mid-length sentences throughout
-- no variation in sentence length or rhythm
-- no moments of emphasis or compression
-- uniformly hedged or uniformly assertive throughout
-
-### Fake neutrality
-Does the text present a clear position as if it were balanced, or balance as if it were wisdom?
-
-Signs:
-- "on the one hand... on the other hand" when one side is clearly stronger
-- hedged conclusions that do not commit to what the evidence supports
-- refusing to name a recommendation when one exists
-
-### The Four Core AI Similarities
-Does the text exhibit machine-like qualities that reduce its human texture?
-
-Check for:
-- **Lacks Creative Grammar:** Is the grammar too perfect and uniform? Are there no rhythmic shifts or creative breaks?
-- **Mechanical Precision:** Is the word choice too technically sterile? Does it avoid the natural idioms of the persona?
-- **Robotic Formality:** Is the tone too consistent and orderly? Does it lack variation in intensity or pace?
-- **Impersonal Tone:** Is it over-relying on indirect speech and third-person distancing?
-
-## Extended pattern reference
-
-For vocabulary clusters, pattern stacking, grammar-level tells, promotional language patterns, and the principle of treating clusters as single strong signals, see:
-
-`docs/anti-ai-guidelines.md`
-
-Apply those patterns as part of this audit pass. The audit is not only about structural or tonal problems — dense AI vocabulary in a single paragraph is also a concrete problem to name.
+Each persona has a **Taboo patterns** section in its file. Check for those specific patterns. They are part of the persona's character, not a global checklist.
 
 ## Output
 
-Produce a short, specific list of what is wrong. Not categories — examples.
+A short, specific list of what is wrong, framed as drift from the persona. Examples:
 
 Bad: "The writing uses filler."
-Good: "The opening sentence restates the paragraph heading. The fourth paragraph ends with a summary that adds nothing. Three uses of 'it is important to note that'."
+Good: "Para 3 explains what an SLO is — sharp-technical persona assumes the reader knows. Cut the definition. Para 5 ends with a one-sentence summary that restates the paragraph — pragmatic-builder doesn't padding-summarize. Cut."
 
-This list is the target for the rewrite pass.
+Bad: "The tone is wrong."
+Good: "The opening sentence reads as warm/agreement-seeking — sharp-technical's identity is calm-assured, not warm. Restart the paragraph with a mechanism statement."
+
+This list is the input for the rewrite pass.
+
+## What this audit deliberately does not do
+
+- It does not consult `dictionaries/ai-patterns.md`, `banned-phrases.md`, `manager-speak.md`, or `docs/anti-ai-guidelines.md` as inputs to the audit. Those are reference material for contributors who want to understand background patterns; they are not a checklist applied during the audit.
+- It does not look for "balanced-at-all-costs," "summary sentence accumulation," "structural parallelism" as global anti-patterns. Those are problems only when they cause the draft to drift from the persona's positive shape — and in that case, the persona-drift checks above catch them, framed positively.
+
+If you find yourself enumerating generic AI patterns to remove, you are off-track. Re-anchor on the persona's positive fields.

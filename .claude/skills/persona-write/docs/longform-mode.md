@@ -43,10 +43,9 @@ Each section is processed as a unit. All steps are recorded in the task-specific
    - `[section]-02-audit.md`
    - `[section]-03-mapping.md`
    - `[section]-04-draft.md`
-   - `[section]-05-scrub.md`
-   - `[section]-06-unbiased-critic.md`
-   - `[section]-07-refine.md`
-   - `[section]-08-fidelity.md`
+   - `[section]-05-coherence.md`
+   - `[section]-06-refine.md`
+   - `[section]-07-fidelity.md`
 3. Write a chapter memory artifact (`[section]-memory.md`)
 
 ### Revision tickets

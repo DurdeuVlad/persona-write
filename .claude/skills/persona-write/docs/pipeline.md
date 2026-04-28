@@ -2,12 +2,14 @@
 
 The internal processing pipeline for Persona Write.
 
-Every task must be executed through a task-specific scratch folder: `scratch/YYYY-MM-DD-[task-slug]/`. This ensures traceability and allows the user to inspect intermediate steps.
+Scratch use is **conditional** — see `../SKILL.md` "Scratch folder & Pipeline traceability" and `voice-guide.md`. Default for short text is in-memory. Long-form, `persona-copy` analysis, and tasks where the user asks for the analysis to be saved use the scratch folder.
+
+When scratch is in use, the file naming convention below applies. When in-memory, the same passes run, but no `.md` files are materialized — the result is returned inline.
 
 ## Short-text pipeline
 
-### 1. Resolve persona & Create task folder
-Determine which persona to use and create the scratch task folder.
+### 1. Resolve persona
+Load the persona file. Hold its Identity, Rhythm model, Stylometric Signature, Lexical Shunts, and Taboo patterns as the brief.
 
 ### 2. Infer mode
 Determine what the user wants to do.
@@ -20,76 +22,73 @@ Determine what the user wants to do.
 
 Ask only if genuinely unclear.
 
-### 3. Intent extraction (`01-intent.md`)
+### 3. Intent extraction (`01-intent.md` if scratch is in use)
 Understand what the text is trying to do, who it is for, what must be preserved.
 
-This must be recorded in the task folder.
-
 ### 4. Diagnostic audit (`02-audit.md`)
-Identify specifically what is wrong with the text.
+Identify specifically what is wrong with the text **relative to the persona**. The audit is persona-fit only — it does not enumerate generic AI patterns. See `../passes/diagnostic-audit.md` and `voice-guide.md`.
 
-Produce a short list of concrete problems to target. Not categories — examples.
+Produce a short list of concrete problems framed as drift from the persona's positive shape.
 
 ### 5. Persona mapping (`03-mapping.md`)
-Translate the persona definition into specific decisions for this text.
+Translate the persona definition into specific decisions for this text — stance, word-pool, structural intent.
 
 ### 6. Rewrite (`04-draft.md`)
-Produce the rewritten or drafted text using the persona mapping brief.
+Produce the rewritten or drafted text through the persona mapping brief.
 
-### 7. Anti-AI scrub (`05-scrub.md`)
-Remove residual patterns that make text feel generated.
+### 7. Voice coherence (`05-coherence.md`)
+Check fit to the persona's positive shape — Identity, Rhythm, Stylometric Signature, Lexical Shunts, Taboo patterns. Apply targeted fixes toward the persona's target. See `../passes/voice-coherence.md`.
 
-### 8. Surgical Tightening (`06-refine.md`)
-Locally tighten sentences and improve specific transitions. Restore natural human texture at the sentence level without applying global "smoothing" that increases AI predictability.
+This pass replaces the previous "anti-AI scrub" and the "Unbiased Anti-AI Critic" passes. The change is empirically motivated — see `voice-guide.md` for the experiment.
 
-### 9. Unbiased Anti-AI Critic (`07-unbiased-critic.md`)
-Mandatory "Chaos & Entropy" pass. Act as a vicious critic to break predictability (perplexity) and symmetry (burstiness). Inject stochastic noise and sub-optimal word choices to restore human-like irregularity.
+### 8. Surgical tightening (`06-refine.md`)
+Locally tighten sentences and improve specific transitions. Sentence-level work only — no global smoothing.
 
-### 10. Fidelity check (`08-fidelity.md`)
+### 9. Fidelity check (`07-fidelity.md`)
 Verify that the rewritten text preserves the meaning of the original.
 
 Only output text that passes this check.
 
-### 11. Final assembly (`final.md`)
-The final version to be returned to the user.
+### 10. Final assembly (`final.md` if scratch is in use)
+Return the final version to the user.
 
 ---
 
 ## Multi-persona chain pipeline
 
-When the user provides more than one persona, the pipeline extends. All reviewer passes and reconciliation must be recorded in the task folder.
+When the user provides more than one persona, the pipeline extends. Each reviewer reads what the previous one produced.
 
 ### Chain execution order
 
-1. **Owner persona drafts or rewrites** — runs the standard short-text pipeline
+1. **Owner persona drafts or rewrites** — runs the standard short-text pipeline.
 2. **Each reviewer persona runs in order** — for each reviewer:
-   - Step A: identify problems (`[reviewer]-feedback.md`)
-   - Step B: apply surgical fixes (`[reviewer]-revision.md`)
-3. **Owner persona runs a final reconciliation pass** (`reconciliation.md`)
+   - Step A: identify drift from the owner persona's positive shape, through the reviewer's own attention model (`[reviewer]-feedback.md` if scratch is in use).
+   - Step B: apply surgical fixes (`[reviewer]-revision.md`).
+3. **Owner persona runs a final reconciliation pass** (`reconciliation.md`) — smooths seams, restores owner voice where displaced, keeps useful reviewer improvements.
 
 ---
 
 ## Long-form pipeline
 
-For long documents, the scratch folder contains the global artifacts and per-section records.
+For long documents, scratch is **required** — chapter memory and revision tickets do durable work that exceeds a single working window.
 
 ### Stage 0: Global brief (`brief.md`)
-Establish the anchor document: persona, audience, purpose, format, core thesis, must-keep facts, tone constraints, locked terminology.
+Establish the anchor: persona, audience, purpose, format, core thesis, must-keep facts, tone constraints, locked terminology.
 
 ### Stage 1: Document map (`map.md`)
 Map the structure: sections, their roles, dependencies, repeated content, drift risks.
 
 ### Stage 2: Chapter workflow loop
 For each section, run the pipeline and record:
+
 1. `[section]-01-intent.md`
 2. `[section]-02-audit.md`
 3. `[section]-03-mapping.md`
 4. `[section]-04-draft.md`
-5. `[section]-05-scrub.md`
+5. `[section]-05-coherence.md`
 6. `[section]-06-refine.md`
-7. `[section]-07-unbiased-critic.md`
-8. `[section]-08-fidelity.md`
-9. `[section]-memory.md`
+7. `[section]-07-fidelity.md`
+8. `[section]-memory.md`
 
 ### Stage 3: Consistency pass (`consistency.md`)
 Whole-document review: persona, tone, terminology, repetition, intro/conclusion alignment, argument flow, open revision tickets in `tickets.md`.
@@ -99,12 +98,10 @@ Assemble the revised sections into the final Markdown document.
 
 ---
 
-## Dictionary references
+## On the dictionaries
 
-The passes reference the dictionaries when identifying patterns:
+`dictionaries/banned-phrases.md`, `dictionaries/manager-speak.md`, and `dictionaries/ai-patterns.md` are **reference material for contributors** writing or refining personas. They are *not* pipeline inputs. The passes do not consult them during writing or audit.
 
-- `dictionaries/banned-phrases.md` — specific phrases to avoid
-- `dictionaries/manager-speak.md` — corporate language patterns
-- `dictionaries/ai-patterns.md` — structural AI patterns
+The reasoning is empirical: requiring the model to enumerate generic AI patterns to avoid produces defensive compression that drifts the prose away from the persona's natural rhythm. Each persona's positive shape (Identity, Rhythm, Stylometric Signature, Taboo patterns) does the work the dictionaries used to do — calibrated to that specific persona, not as a global sweep.
 
-The dictionaries are pattern guides, not blocklists. Apply judgment.
+See `voice-guide.md` for the experimental evidence and the contributor-facing implications.

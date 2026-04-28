@@ -103,8 +103,8 @@ Map the user's brief onto the extracted persona. Identify any genre or audience 
 ### Pass 8 — Draft (`08-draft.md`)
 Write the new piece in the persona, hitting the rhetorical scaffolding and stylometric fingerprint identified in passes 2–3.
 
-### Pass 9 — Anti-AI scrub (`09-scrub.md`)
-Apply `../persona-write/passes/anti-ai-scrub.md`. Generic AI patterns are a different failure than persona drift; both must be removed.
+### Pass 9 — Voice coherence against the extracted persona (`09-coherence.md`)
+Apply `../persona-write/passes/voice-coherence.md`, calibrated against the **extracted** persona's Identity, Rhythm model, and Stylometric Signature from `persona.md` (pass 5). The check is fit to the source author's positive shape, not removal of generic AI patterns. If the draft drifts from the extracted Stylometric Signature on any feature, fix toward the target.
 
 ### Pass 10 — Verification (`10-verification.md`)
 Check the draft against the **target profile** from pass 6:

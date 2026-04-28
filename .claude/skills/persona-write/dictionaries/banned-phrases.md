@@ -1,8 +1,12 @@
-# Banned Phrases
+# Banned Phrases — reference only
 
-These phrases appear frequently in AI-generated writing and weaken the text. Avoid them in all persona modes unless there is a specific reason to use one.
+> **This file is reference material, not a pipeline input.** Do not consult it during writing or audit. The pipeline relies on each persona's positive shape (Identity, Rhythm, Stylometric Signature, Taboo patterns) rather than a global ban list. See `../docs/voice-guide.md` for why.
+>
+> What this file is good for: writing or refining a new persona, where you want a catalogue of common stalls/transitions/enthusiasm-performances to draw from when defining that persona's own Taboo patterns.
 
-This is not an exhaustive blocklist. It is a pattern guide. The problem is not the words themselves — it is what they signal: that the writer is stalling, hedging unnecessarily, or padding.
+These phrases appear frequently in AI-generated writing and tend to weaken the text in most personas. They are presented here as a pattern catalogue.
+
+The problem is not the words themselves — it is what they signal: stalling, hedging unnecessarily, padding. Whether a given phrase is a problem depends on the persona; what's a stall in `sharp-technical` may be earned engagement in `clear-teacher`.
 
 ## Opener stalls
 

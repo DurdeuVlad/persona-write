@@ -19,7 +19,7 @@ Here are five essays I've written. Write a sixth one in the same style on the to
 6. Pass 6 — score the five essays on the rubric → target profile.
 7. Pass 7 — reconcile brief.
 8. Pass 8 — draft the sixth essay.
-9. Pass 9 — anti-AI scrub.
+9. Pass 9 — voice coherence against the extracted persona.
 10. Pass 10 — verify against rubric target and fingerprint; fix gaps.
 11. Pass 11 — return the final essay plus a one-line note that the analysis is in the scratch folder.
 

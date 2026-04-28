@@ -79,7 +79,7 @@ Joseph Williams' principles, taught for decades at the University of Chicago, gi
 - Cohesion via topic strings.
 - Concision: delete metadiscourse, redundant pairs, and obvious throat-clearing.
 
-These show up directly in the **Taboo patterns** lists and in the anti-AI guidelines (`anti-ai-guidelines.md`).
+These show up directly in the **Taboo patterns** lists of each persona file. (For background on common AI patterns at the document level, see `anti-ai-guidelines.md` — reference only; not a pipeline input.)
 
 ### Sentence-level craft (Tufte, *Artful Sentences*, 2006; Klinkenborg, *Several Short Sentences*, 2012; Pinker, *Sense of Style*, 2014)
 Tufte catalogues syntactic moves (cumulative sentences, suspended sentences, parallelism, anaphora). Klinkenborg argues for sentence-as-unit-of-thought. Pinker formalises Thomas & Turner's "classic style" — the writer and reader as equals looking at the same world. The **Rhythm model** field is calibrated on these.

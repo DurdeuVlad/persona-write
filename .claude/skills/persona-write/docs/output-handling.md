@@ -2,16 +2,21 @@
 
 How Persona Write returns results.
 
-## Scratch folder mandate
+## Scratch folder — conditional
 
-**All tasks must use a task-specific scratch folder:** `scratch/YYYY-MM-DD-[task-slug]/`.
+Scratch is **durable memory**, not virtuous traceability. Use it when memory is needed; skip it when the model already holds the context.
 
-This folder is used to record every step of the pipeline, providing transparency and a record of the AI's internal reasoning.
+- **Default for short text:** in-memory. Return the result inline.
+- **Long-form (multi-section, > ~2000 words):** scratch is required. Chapter memory and revision tickets do durable work that exceeds a single working window.
+- **`/persona-copy` analysis the user wants saved:** scratch is required.
+- **Short-text tasks where the user asks for the analysis to be saved:** scratch on request.
+
+When scratch is in use, the folder is `scratch/YYYY-MM-DD-[task-slug]/`. See `voice-guide.md` for the reasoning.
 
 ## Default behavior
 
 ### Short tasks
-Return the result inline with a brief note on what changed. Mention that the full pipeline trace is available in the scratch folder.
+Return the result inline with a brief note on what changed. The pipeline ran in-context; there is no scratch folder by default. If the user wants the analysis saved, they can ask.
 
 The note should be short — one or two sentences naming the main adjustments. Return a full diagnostic only if the user explicitly asked for one.
 
@@ -23,16 +28,19 @@ Return a short note that the document was processed section by section, and that
 
 ## When to use files
 
-Use Markdown files in the scratch folder for **everything**:
+When scratch is active, write each pipeline pass to a numbered Markdown file. Items most often serialised:
+
 - intent extraction
 - diagnostic audits
 - persona mapping
-- drafts and refined versions
+- drafts
+- voice coherence
+- refinement notes
 - fidelity checks
-- global briefs
-- document maps
-- chapter memory logs
-- revision ticket lists
+- global briefs (long-form)
+- document maps (long-form)
+- chapter memory logs (long-form)
+- revision tickets (long-form)
 - final assembled output
 
 Markdown is the canonical working format.
@@ -43,10 +51,9 @@ Markdown is the canonical working format.
 - `02-audit.md`
 - `03-mapping.md`
 - `04-draft.md`
-- `05-scrub.md`
-- `06-unbiased-critic.md`
-- `07-refine.md`
-- `08-fidelity.md`
+- `05-coherence.md`
+- `06-refine.md`
+- `07-fidelity.md`
 - `final.md`
 
 For long-form, use section prefixes as described in `pipeline.md`.

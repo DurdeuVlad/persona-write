@@ -1,4 +1,8 @@
-# Manager Speak
+# Manager Speak — reference only
+
+> **This file is reference material, not a pipeline input.** Do not consult it during writing or audit. The pipeline relies on each persona's positive shape (Identity, Rhythm, Stylometric Signature, Taboo patterns), not a global blocklist. See `../docs/voice-guide.md` for why.
+>
+> What this file is good for: shaping the Taboo patterns section of a new persona, especially business/product/operator personas where corporate sludge is a real risk.
 
 Corporate and managerial language patterns that produce the appearance of communication without the substance.
 

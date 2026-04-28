@@ -191,14 +191,20 @@ Do not look back at the source text while drafting. You are reproducing a *style
 
 ---
 
-## Pass 9 — Anti-AI scrub
+## Pass 9 — Voice coherence against the extracted persona
 
-Run `../persona-write/passes/anti-ai-scrub.md` against the draft. Strip:
-- generic AI vocabulary (`delve`, `intricate`, `tapestry`, `landscape`, `journey`, `unleash`)
-- structural tells (three-item lists where two would do; `not only X but Y` parallels; `It's worth noting that`)
-- assistant register (`I hope this helps`, `In conclusion`, `Let me know`)
+Run `../persona-write/passes/voice-coherence.md` against the draft, calibrated against the **extracted** persona's Identity, Rhythm model, Stylometric Signature, and Taboo patterns from `persona.md` (pass 5).
 
-Removing AI patterns is separate from matching the persona. Both must succeed.
+The check is *fit to the source author's positive shape*, not removal of generic AI patterns. Why: see `../persona-write/docs/voice-guide.md`. Asking the model to enumerate generic AI patterns produces defensive compression that drifts the draft *away* from the source's natural rhythm.
+
+What to check, in order:
+
+- **Stylometric drift**: is mean sentence length within ±20% of the extracted target? Lexical density in band? Punctuation profile in band? Opener inventory matches the source's top openers?
+- **Lexical fit**: are the source author's named **Lexical Shunts** present in the draft? Did the draft introduce vocabulary the source author would not use?
+- **Stance fit**: hedge / booster / self-mention rates in line with the extracted profile?
+- **Taboo patterns** from the extracted persona: cross-check.
+
+If the draft drifts on a specific dimension, fix toward the target. The target is the source author, not a generic ideal.
 
 ---
 

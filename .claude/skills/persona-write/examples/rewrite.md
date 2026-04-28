@@ -31,10 +31,9 @@ The following files were created in `scratch/2026-04-20-auth-rewrite/`:
 - `02-audit.md` — Noted generic opener, redundant definitions, and announcement filler.
 - `03-mapping.md` — Decided to lead with implementation choices and tradeoffs.
 - `04-draft.md` — Initial draft in pragmatic-builder voice.
-- `05-scrub.md` — Removed "it's important to note" and "in conclusion".
-- `06-unbiased-critic.md` — Critiqued robotic formality in the token explanation; added rhythmic shifts.
-- `07-refine.md` — Tightened the revocation explanation.
-- `08-fidelity.md` — Confirmed session/token tradeoffs are accurately represented.
+- `05-coherence.md` — Voice coherence check against `pragmatic-builder`: confirmed mean sentence length in band, persona Lexical Shunts present, no items from Taboo patterns. One small fix: shortened a 28-word mechanism sentence to two clauses.
+- `06-refine.md` — Tightened the revocation explanation.
+- `07-fidelity.md` — Confirmed session/token tradeoffs are accurately represented.
 - `final.md` — Final version as shown below.
 
 ## Output

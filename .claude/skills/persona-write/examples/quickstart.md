@@ -16,7 +16,7 @@ We have developed a new deployment system that allows teams to push code to prod
 3. Intent extraction: announcing a system; audience is technical
 4. Diagnostic audit: vague claims ("greater speed and reliability", "advanced techniques", "significant improvement"), no mechanism described, hollow opener
 5. Persona mapping: lead with what it does; cut "we have developed"; name the actual mechanism or be honest that it is not named here; direct assertion on the outcome
-6. Rewrite, scrub, refine, fidelity check
+6. Rewrite, voice coherence, refine, fidelity check
 
 ## Expected output shape
 

@@ -2,9 +2,9 @@
 
 ## Purpose
 
-Tighten and smooth the rewritten text after the anti-AI scrub.
+Tighten and smooth the rewritten text after voice coherence.
 
-The rewrite and scrub passes address major problems. The refine pass addresses what remains: awkward phrasing, uneven rhythm, sentences that work but could work better.
+The rewrite and voice-coherence passes address major problems. The refine pass addresses what remains: awkward phrasing, uneven rhythm, sentences that work but could work better.
 
 This is a lighter pass. Do not re-diagnose. Do not re-structure. Work at the sentence and paragraph level.
 

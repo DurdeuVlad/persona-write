@@ -4,6 +4,36 @@ All notable changes to this project will be documented here.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2.2.0] - 2026-04-28
+
+### Removed
+
+- `passes/anti-ai-scrub.md` deleted. Empirical pilot showed that asking the model to enumerate generic AI patterns to avoid produces defensive compression (white-bear effect) — the prose drifts *away* from the persona's natural rhythm. Output came in 30-40% shorter and at half the persona's target mean sentence length. The pass made every persona read like a homogenised "anti-AI register."
+- The phantom `passes/unbiased-critic.md` reference removed from `SKILL.md` and `docs/pipeline.md`. The "Unbiased Anti-AI Critic" pass was the same defensive pattern-matcher; its file did not exist.
+- Mandatory scratch-folder requirement for all tasks dropped. Scratch is now conditional.
+
+### Added
+
+- `passes/voice-coherence.md` — replaces `anti-ai-scrub.md`. Positive-shape framing only: does the draft match the persona's Identity, Rhythm model, Stylometric Signature, Lexical Shunts, and Taboo patterns? Targeted fixes go *toward* the persona's target, not against a global ban list.
+- `docs/voice-guide.md` — empirical companion to `persona-theory.md` and `writing-quality-rubric.md`. Documents the pilot results that drove the pipeline change.
+
+### Changed
+
+- `passes/diagnostic-audit.md` rewritten to be persona-fit only. No longer references `dictionaries/*` or the "Four Core AI Similarities."
+- `dictionaries/banned-phrases.md`, `dictionaries/manager-speak.md`, `dictionaries/ai-patterns.md`, and `docs/anti-ai-guidelines.md` demoted to **reference-only** with a banner at the top of each. They remain in the repo as background reading for contributors writing new personas, but the pipeline does not consult them during writing or audit.
+- `docs/writing-quality-rubric.md` Voice and Word Choice diagnostics updated to reference each persona's positive shape (Lexical Shunts, Stylometric Signature, Taboo patterns) instead of `dictionaries/ai-patterns.md`.
+- `persona-copy/pipeline.md` Pass 9 changed from "anti-AI scrub" to "voice coherence against the extracted persona" — calibrated against the source author's positive shape.
+- `persona-review/SKILL.md` and `docs/review-principles.md` updated to frame review through the owner persona's positive shape, not a global anti-AI checklist.
+- Scratch folder usage made **conditional**:
+  - **In-memory** is now the default for short text. The model holds intermediate state in working memory; serialising and re-reading attenuates persona commitment.
+  - **Scratch required** for long-form (chapter memory does durable work) and `persona-copy` analysis the user wants saved.
+  - **Scratch on request** for short text where the user wants the analysis saved.
+- `passes/refine.md`, `longform/chapter-workflow.md`, `examples/rewrite.md`, `examples/quickstart.md`, `docs/pipeline.md`, `docs/output-handling.md` updated to reference the new pass names and conditional-scratch model.
+
+### Personas
+
+- All 6 persona files **unchanged**. Their `Taboo patterns` sections are character expressions, not defensive checklists, and remain part of the persona's positive shape.
+
 ## [2.1.0] - 2026-04-28
 
 ### Added

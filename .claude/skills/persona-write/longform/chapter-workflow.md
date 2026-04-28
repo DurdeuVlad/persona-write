@@ -45,8 +45,8 @@ Rewrite the section using the local persona mapping as the brief.
 
 Do not rewrite other sections at this stage, even if you notice issues in them. Flag them as revision tickets instead.
 
-### 6. Anti-AI scrub
-Run the standard anti-AI scrub on the section output.
+### 6. Voice coherence
+Check the section against the persona's positive shape — Identity, Rhythm model, Stylometric Signature, Lexical Shunts, Taboo patterns. Apply targeted fixes toward the persona's target. See `../passes/voice-coherence.md`.
 
 ### 7. Local refinement
 Tighten and smooth the section.

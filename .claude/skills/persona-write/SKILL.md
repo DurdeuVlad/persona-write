@@ -32,14 +32,25 @@ The goal is writing shaped by a specific attention model, compression level, and
 
 ## Scratch folder & Pipeline traceability
 
-To ensure the pipeline is followed and the user can see the internal reasoning, **every task must use a scratch folder.**
+Scratch files are **durable memory**, not virtuous traceability. Use them when memory is needed for the task. Skip them when the model already holds the context.
+
+### When to use the scratch folder
+
+- **Long-form work** (multi-section documents, > ~2000 words). The chapter-memory artifacts and revision tickets are doing real work that exceeds a single working window. **Required.**
+- **`/persona-copy` analysis the user wants saved** (extracted persona files, verification reports). **Required.**
+- **Short-text tasks where the user explicitly asks for the analysis to be saved.** Optional, on request.
+
+### When to skip the scratch folder
+
+- **Short-text tasks (< ~1000 words)** where the user just wants the result. Run the passes in-context. The intermediate state is held in working memory, where it is more cohesive than after serialization-and-reread. **Default.**
+
+### When you do use scratch
 
 1. **Create a task folder:** `scratch/YYYY-MM-DD-[task-slug]/`
-2. **Record every pass:** Each step in the pipeline (Intent, Audit, Mapping, etc.) must be written to its own `.md` file in that folder.
-3. **Number the files:** Use `01-intent.md`, `02-audit.md`, `03-mapping.md`, etc.
-4. **Final output:** Write the final draft to `final.md` in the same folder before returning it to the user.
+2. **Record each pass to its own numbered `.md` file:** `01-intent.md`, `02-audit.md`, `03-mapping.md`, `04-draft.md`, `05-coherence.md`, `06-refine.md`, `07-fidelity.md`, `final.md`.
+3. The scratch folder is gitignored.
 
-This applies to **all tasks**, including short rewrites. The scratch folder is gitignored.
+The reasoning behind making scratch conditional, with experimental evidence, is in `docs/voice-guide.md`.
 
 ## When to use this skill
 
@@ -154,18 +165,22 @@ Do not make the custom persona theatrical or exaggerated.
 
 ## Short-text workflow
 
-For short text, process each step by writing to the scratch folder:
+Default to **in-memory** for short text. Run the passes in-context unless the user has asked for the analysis to be saved.
 
-1. **Resolve persona & Create task folder**
-2. **Infer mode**
-3. **Extract intent** (`01-intent.md`) — what the text is trying to do, who it is for, what must be preserved
-4. **Run a diagnostic audit** (`02-audit.md`) — identify generic assistant patterns, filler, and structural tells.
-5. **Persona Immersion Mapping** (`03-mapping.md`) — Establish stance, word-pool (slang/shorthand), and structural intent.
-6. **Draft or rewrite** (`04-draft.md`) — Write through the immersion brief; prioritize internal logic over smooth flow.
-7. **Voice Scrub** (`05-scrub.md`) — Remove residual "brochure" language or neutral hedging that displaced the persona.
-8. **Refine** (`06-refine.md`) — Locally tighten and improve flow without global smoothing.
-9. **Run fidelity check** (`07-fidelity.md`) — preserve meaning and nuance.
-10. **Final output** (`final.md`)
+The pass sequence (whether materialized to scratch or held in memory):
+
+1. **Resolve persona** — load the persona file. Hold its Identity, Rhythm, and Stylometric Signature as the brief.
+2. **Infer mode** — draft / rewrite / audit / refine / longform.
+3. **Extract intent** — what the text is trying to do, who it is for, what must be preserved.
+4. **Run a diagnostic audit** (persona-fit only) — identify drift from the persona's positive shape. **Do not enumerate generic AI patterns**; see `docs/voice-guide.md`.
+5. **Persona immersion mapping** — stance, word-pool (the persona's Lexical Shunts), structural intent.
+6. **Draft or rewrite** — write through the immersion brief; prioritise internal logic over smooth flow.
+7. **Voice coherence** — check fit to the persona's positive shape (Identity, Rhythm, Stylometric Signature, Taboo patterns). Apply targeted fixes toward the persona's target. See `passes/voice-coherence.md`.
+8. **Refine** — locally tighten and improve flow without global smoothing.
+9. **Fidelity check** — preserve meaning and nuance.
+10. **Final output** — return inline (or write to `final.md` if scratch is in use).
+
+If scratch is in use, write each step to a numbered `.md` file (`01-intent.md` ... `07-fidelity.md`, `final.md`).
 
 ## Long-form workflow
 
@@ -197,7 +212,7 @@ For each section or chapter, write to the task folder:
 2. local diagnostic audit (`[section]-02-audit.md`)
 3. local persona immersion (`[section]-03-mapping.md`)
 4. section rewrite (`[section]-04-draft.md`)
-5. voice scrub (`[section]-05-scrub.md`)
+5. voice coherence (`[section]-05-coherence.md`)
 6. local refinement (`[section]-06-refine.md`)
 7. fidelity check (`[section]-07-fidelity.md`)
 8. chapter memory artifact (`[section]-memory.md`)
@@ -263,23 +278,23 @@ Preset persona definitions are in:
 ## Supporting modules
 
 ### Docs
+- `docs/voice-guide.md` — active guidance on voice coherence (positive-shape framing). Why the pipeline does not enumerate anti-AI patterns.
+- `docs/persona-theory.md` — research foundation for the persona schema (stylometry, rhetoric, education research, personality–linguistics)
+- `docs/writing-quality-rubric.md` — research-backed analytic rubric used by `persona-copy` and the diagnostic-audit pass
 - `docs/persona-chain-mode.md`
-- `docs/anti-ai-guidelines.md`
 - `docs/pipeline.md`
 - `docs/longform-mode.md`
 - `docs/simple-usage.md`
 - `docs/philosophy.md`
 - `docs/contributor-guide.md`
-- `docs/persona-theory.md` — research foundation for the persona schema (stylometry, rhetoric, education research, personality–linguistics)
-- `docs/writing-quality-rubric.md` — research-backed analytic rubric used by `persona-copy` and the diagnostic-audit pass
+- `docs/anti-ai-guidelines.md` — *reference only*; background on common AI patterns. Not a pipeline input.
 
 ### Passes
 - `passes/intent-extraction.md`
 - `passes/diagnostic-audit.md`
 - `passes/persona-mapping.md`
 - `passes/rewrite.md`
-- `passes/anti-ai-scrub.md`
-- `passes/unbiased-critic.md`
+- `passes/voice-coherence.md`
 - `passes/refine.md`
 - `passes/fidelity-check.md`
 

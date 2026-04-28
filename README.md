@@ -8,7 +8,7 @@ Give Claude Code a persona and it writes from that person's point of view — th
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-skill-blue)](https://claude.ai/code)
-[![Version](https://img.shields.io/badge/version-2.1.0-green)]()
+[![Version](https://img.shields.io/badge/version-2.2.0-green)]()
 
 </div>
 
@@ -167,12 +167,14 @@ Final output reads as the first persona's work. Reviewers improve it; they do no
 | Pass | What it does |
 |---|---|
 | Intent extraction | What is this text trying to do, and for whom |
-| Diagnostic audit | What needs attention and why |
+| Diagnostic audit | Where the draft drifts from the persona's positive shape |
 | Persona mapping | What this persona foregrounds, cuts, asserts |
 | Rewrite | Apply the brief |
-| Anti-AI scrub | Remove residual generic patterns |
+| Voice coherence | Check fit to the persona's Identity / Rhythm / Stylometric Signature |
 | Refine | Tighten, fix rhythm |
 | Fidelity check | Meaning and nuance survived |
+
+The pipeline runs **in-memory by default** for short text. Scratch folders are used for long-form work, `persona-copy` analysis, and on request — see [`voice-guide.md`](.claude/skills/persona-write/docs/voice-guide.md) for why this matters.
 
 ### Long-form — section by section
 

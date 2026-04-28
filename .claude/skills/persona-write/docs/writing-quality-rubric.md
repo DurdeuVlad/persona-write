@@ -70,7 +70,7 @@ Diagnostics: Williams' given/new contract — does each sentence open with infor
 | **2 — Emerging** | Hints of voice but mostly generic. The piece would be unattributable to its persona without context. |
 | **1 — Weak** | No voice. Could have been written by anyone or anything. The piece is structurally smooth and informationally hollow — the dominant failure mode of generic AI prose. |
 
-Diagnostics: anti-AI scrub patterns (`dictionaries/ai-patterns.md`); ratio of persona-tagged lexical shunts present; absence of throat-clearing openers (`In today's...`, `It's worth noting that...`).
+Diagnostics: match against the persona's **Identity**, **Rhythm model**, and **Stylometric Signature**; presence of the persona's named **Lexical Shunts**; absence of items in the persona's **Taboo patterns** section. The check is *fit to positive target*, not against a global ban list. Generic AI patterns surface naturally as misses on the persona's positive shape.
 
 ---
 
@@ -86,7 +86,7 @@ Diagnostics: anti-AI scrub patterns (`dictionaries/ai-patterns.md`); ratio of pe
 | **2 — Emerging** | Frequent vague nouns, manager-speak, or undifferentiated synonyms. Reader has to translate. |
 | **1 — Weak** | Pervasive cliché, jargon-without-content, or the AI-prose register of `delve`, `intricate`, `tapestry`, `ever-evolving landscape`. |
 
-Diagnostics: type-token ratio; banned-phrase hit count (`dictionaries/banned-phrases.md`, `dictionaries/manager-speak.md`); nominalisation density (Lanham — circle prepositions and `-tion`/`-ment` nouns).
+Diagnostics: type-token ratio against the persona's target; presence of the persona's named **Lexical Shunts**; nominalisation density (Lanham — circle prepositions and `-tion`/`-ment` nouns); absence of items in the persona's **Taboo patterns** section. As with Voice, the test is fit to the persona's positive vocabulary signature, not match against a global blocklist.
 
 ---
 
