@@ -25,6 +25,17 @@ This skill is for:
 - Preserve meaning before anything else.
 - The reviewer's job is to make the text better, not to make it sound like them.
 
+## Scratch folder & Pipeline traceability
+
+To ensure the pipeline is followed and the user can see the internal reasoning, **every review task must use a scratch folder.**
+
+1. **Create a task folder:** `scratch/YYYY-MM-DD-[task-slug]/`
+2. **Record every step:** Each step in the review workflow must be written to its own `.md` file in that folder.
+3. **Number the files:** Use `01-owner-voice.md`, `02-review-feedback.md`, etc.
+4. **Final output:** Write the final revised text to `final.md` in the same folder before returning it to the user.
+
+This applies to **all tasks**. The scratch folder is gitignored.
+
 ## When to use this skill
 
 Use this skill when you want to:
@@ -65,14 +76,16 @@ If no owner persona is stated, infer from the text's existing voice or proceed w
 
 ## Review workflow
 
-### Step 1: Understand the text's owner voice
+For each review task, process through the scratch folder:
+
+### Step 1: Understand the text's owner voice (`01-owner-voice.md`)
 Before reviewing, identify:
 - what persona or voice the text is currently written in
 - what the text is trying to do
 - who it is for
 - what must be preserved
 
-### Step 2: Apply the reviewer perspective
+### Step 2: Apply the reviewer perspective (`02-review-feedback.md`)
 From the reviewer persona's stance, identify:
 - what feels off, unclear, or misframed
 - where tone is wrong for the intended audience
@@ -83,28 +96,18 @@ From the reviewer persona's stance, identify:
 
 Reference `docs/review-principles.md` and the shared anti-AI guidelines in the persona-write skill (`../persona-write/docs/anti-ai-guidelines.md`).
 
-### Step 3: Apply surgical fixes
+### Step 3: Apply surgical fixes (`03-revision-draft.md`)
 Make targeted changes directly. Do not ask permission first.
 
 Apply:
-- sentence-level rewording
-- paragraph-level restructuring where needed
-- local framing improvements
-- cuts where content is redundant or misplaced
-- additions where context is missing for the audience
-
-Do not:
-- rewrite the whole piece in the reviewer's voice
-- shift the text's center of gravity unless clearly necessary
-- flatten the text into generic prose in an attempt to improve neutrality
-
-### Step 4: Report what changed
-After the review pass, provide a short note explaining:
+...
+### Step 4: Report what changed (`final.md`)
+After the review pass, produce the final version and a short note explaining:
 - what the reviewer identified as the main problems
 - what was changed and why
 - what was deliberately left alone
 
-Keep this brief. The text is the output. The explanation is supporting context.
+Return this final version to the user.
 
 ## Output format
 

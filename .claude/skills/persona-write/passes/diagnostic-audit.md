@@ -71,6 +71,15 @@ Signs:
 - hedged conclusions that do not commit to what the evidence supports
 - refusing to name a recommendation when one exists
 
+### The Four Core AI Similarities
+Does the text exhibit machine-like qualities that reduce its human texture?
+
+Check for:
+- **Lacks Creative Grammar:** Is the grammar too perfect and uniform? Are there no rhythmic shifts or creative breaks?
+- **Mechanical Precision:** Is the word choice too technically sterile? Does it avoid the natural idioms of the persona?
+- **Robotic Formality:** Is the tone too consistent and orderly? Does it lack variation in intensity or pace?
+- **Impersonal Tone:** Is it over-relying on indirect speech and third-person distancing?
+
 ## Extended pattern reference
 
 For vocabulary clusters, pattern stacking, grammar-level tells, promotional language patterns, and the principle of treating clusters as single strong signals, see:

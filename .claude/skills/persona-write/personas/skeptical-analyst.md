@@ -49,6 +49,14 @@ Measured and deliberate. Medium sentence length. Not dramatic. Not flat.
 
 Uses qualifiers precisely — "often" does not mean "always", "suggests" does not mean "proves". These distinctions matter in the text.
 
+## Linguistic Fingerprint
+
+- **Rhythmic Pulse:** 20% Staccato (for hard facts) / 80% Periodic (for nuance).
+- **Lexical Shunts:** "slippage" instead of "error", "unsupported" instead of "wrong", "weak link" instead of "problem".
+- **Function Word Profile:** Frequent use of "if," "though," and "while" to manage nuance; high usage of semicolons to balance multi-part evidence.
+- **Cognitive Bias:** Confirmation Bias awareness. Actively looks for evidence that contradicts the primary claim.
+- **Social Deictics:** Balanced "We" (the collective inquiry) and "It" (the evidence).
+
 ## Taboo patterns
 
 - Overclaiming beyond the evidence

@@ -2,10 +2,16 @@
 
 How Persona Write returns results.
 
+## Scratch folder mandate
+
+**All tasks must use a task-specific scratch folder:** `scratch/YYYY-MM-DD-[task-slug]/`.
+
+This folder is used to record every step of the pipeline, providing transparency and a record of the AI's internal reasoning.
+
 ## Default behavior
 
 ### Short tasks
-Return the result inline with a brief note on what changed.
+Return the result inline with a brief note on what changed. Mention that the full pipeline trace is available in the scratch folder.
 
 The note should be short — one or two sentences naming the main adjustments. Return a full diagnostic only if the user explicitly asked for one.
 
@@ -13,38 +19,42 @@ The note should be short — one or two sentences naming the main adjustments. R
 Return a concise diagnosis. If a rewrite would be useful and obvious, include it. Otherwise, ask first.
 
 ### Long-form tasks
-Return a short note that the document was processed section by section, then either:
-- the final assembled document inline if it is manageable in length
-- the location of the generated Markdown files if the output is large
+Return a short note that the document was processed section by section, and that all artifacts and the final document are in the task-specific scratch folder.
 
 ## When to use files
 
-Use Markdown files for:
+Use Markdown files in the scratch folder for **everything**:
+- intent extraction
+- diagnostic audits
+- persona mapping
+- drafts and refined versions
+- fidelity checks
 - global briefs
 - document maps
 - chapter memory logs
 - revision ticket lists
-- final assembled long-form documents
-- multi-iteration work where the user will want to track changes
+- final assembled output
 
-Do not use files for short rewrites or single-section audits. Inline output is faster and easier for the user.
+Markdown is the canonical working format.
 
-## File naming
+## File naming in scratch folder
 
-Use the document title or a short description as the base name:
+- `01-intent.md`
+- `02-audit.md`
+- `03-mapping.md`
+- `04-draft.md`
+- `05-scrub.md`
+- `06-unbiased-critic.md`
+- `07-refine.md`
+- `08-fidelity.md`
+- `final.md`
 
-- `deployment-guide-brief.md`
-- `deployment-guide-map.md`
-- `deployment-guide-memory.md`
-- `deployment-guide-tickets.md`
-- `deployment-guide-final.md`
-
-If there is no natural document title, use the date and a brief description.
+For long-form, use section prefixes as described in `pipeline.md`.
 
 ## Format
 
 Markdown is the canonical working format.
-
+...
 Do not use `.docx` as a working format. If the user needs a `.docx` for final delivery, that is a separate export step handled outside this skill.
 
 Do not use HTML. Do not use PDF as an intermediate format.

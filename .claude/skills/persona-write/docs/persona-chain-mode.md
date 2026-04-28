@@ -32,6 +32,20 @@ The skill accepts natural expressions. Any of these work:
 
 Do not use `owner:` or `reviewer:` syntax. The skill infers roles from position.
 
+## Chain execution trace
+
+Every chain task must be recorded in the task-specific scratch folder (`scratch/YYYY-MM-DD-[task-slug]/`).
+
+For a chain `owner -> reviewer1 -> reviewer2`:
+
+1. **Owner Draft:** Recorded through the standard short-text pipeline (`01-intent.md` through `final.md` for the draft stage).
+2. **Reviewer 1:** Recorded in `[reviewer1]-feedback.md` and `[reviewer1]-revision.md`.
+3. **Reviewer 2:** Recorded in `[reviewer2]-feedback.md` and `[reviewer2]-revision.md`.
+4. **Owner Reconciliation:** Recorded in `reconciliation.md`.
+5. **Final Output:** The final version saved to `final.md` and returned to the user.
+
+---
+
 ## What each reviewer does
 
 Reviewers run a two-step process automatically. They do not ask permission before making changes.

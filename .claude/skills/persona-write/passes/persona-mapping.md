@@ -1,64 +1,42 @@
-# Pass: Persona Mapping
+# Pass: Persona Mapping (Immersion)
 
 ## Purpose
 
-Translate the persona definition into specific decisions about this particular piece of text.
+Establish the **internal logic** and **linguistic signature** of the persona before writing begins. 
 
-Persona definitions describe tendencies. Persona mapping applies those tendencies to the content at hand.
+This is the most critical pass for authenticity. Instead of following general rules, you immerse yourself in the persona's specific technical world and social stance.
 
 ## What to decide
 
-### What this persona foregrounds
-Given the subject matter and intent, what would this persona lead with?
+### 1. Internal Logic & Stance
+What is this persona's "non-negotiable" view on this content? 
+- If the content is a technical guide, does this persona find it "instructional" or "a necessary evil"? 
+- If it's a marketing piece, do they find it "exciting" or "suspicious"?
+- **Action:** Define the primary "opinion" that will drive the narrative.
 
-A sharp-technical persona writing about a database design decision would foreground the mechanism and constraints.
-A pragmatic-builder persona writing the same piece would foreground the tradeoffs and the recommendation.
-A clear-teacher persona would build from the unfamiliar concept toward the practical implication.
+### 2. Implicit Vocabulary (Slang & Shorthand)
+Identify the 5-10 specific terms or metaphors this persona would use that a generic assistant wouldn't.
+- **Example:** "Plumbing," "Grind," "Slog," "Wired up," "Shipping," "Surface area."
+- **Action:** Build a small "word-pool" for this specific task.
 
-The same content, structured differently.
+### 3. Structural Intent
+How would this person naturally organize their thoughts?
+- A **sharp-technical** person might jump straight to the code.
+- A **clear-teacher** might start with a relatable failure mode.
+- **Action:** Reject the "Intro-Body-Conclusion" template. Design a structure that fits the persona's priority.
 
-### What this persona cuts
-What would this persona find unnecessary?
-
-- background context the reader does not need
-- motivational framing on a technical point
-- softening hedges on a clear claim
-- examples when the mechanism is obvious
-
-Not every persona cuts the same things. Map it specifically.
-
-### How this persona handles certainty
-Is the text making strong claims, hedged claims, or uncertain ones?
-
-- How does this persona handle a strong claim? Does it assert it directly or qualify it?
-- How does this persona handle uncertainty? Does it name it explicitly or understate it?
-- Where would this persona push back on claims that feel overclaimed?
-
-### Compression level for this content
-Given the audience and subject, how dense should this version be?
-
-- What vocabulary is safe to use without definition?
-- What can be implied versus stated?
-- What must be made explicit even though it slows the pace?
-
-### Rhythm decisions
-Given the persona's rhythm model, how should this content be structured?
-
-- Where are the short sentences?
-- Where is there more room to breathe?
-- What gets a paragraph break? What stays in the same paragraph?
+### 4. Rhythmic Profile
+Determine the "breath" of the text.
+- Short and punchy for high compression?
+- Long, winding, and explanatory for accessibility?
+- **Action:** Set the rhythmic baseline.
 
 ## Output
 
-A short working brief — not written prose, just decisions:
-
+A short **Immersion Brief**:
 ```
-Persona: sharp-technical
-Lead with: the constraint that makes the naive approach fail
-Cut: the motivating paragraph about why this matters (reader knows)
-Certainty: direct on the failure mode, hedged on the performance claim (data is thin)
-Compression: high — expert audience, no definitions needed
-Rhythm: short sentences for the main claim, medium for the mechanism explanation
+Stance: This protocol is a distraction; the framework is the tool.
+Word-pool: grind, boilerplate, bind, pixels, wiring, shim.
+Structure: Frustration -> Solution -> Mechanical Deep-dive -> Operational Caveat.
+Rhythm: Punchy claims followed by dense technical asides.
 ```
-
-This brief is the operating guide for the rewrite pass.

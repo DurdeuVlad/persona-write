@@ -113,9 +113,12 @@ But if you want to be explicit:
 
 ## Output
 
-For short tasks, you get inline output with a brief note on what changed.
+Every task creates a task-specific scratch folder (e.g., `scratch/2026-04-20-auth-rewrite/`).
 
-For long tasks, the skill will produce Markdown files if the output is too large for inline display.
+- **Short tasks:** You get inline output with a brief note on what changed. The full pipeline trace is saved in the scratch folder.
+- **Long tasks:** All artifacts (global brief, document map, section drafts, chapter memory) and the final document are saved in the scratch folder.
+
+The scratch folder is gitignored and ensures you can always see the internal reasoning behind the changes.
 
 ## If something is off
 

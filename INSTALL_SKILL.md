@@ -133,19 +133,20 @@ Create a `.md` file in `personas/` using the schema in `persona-create/template.
 ### How the workflow runs
 
 **Short text:**
-1. Resolve persona (preset or custom)
-2. Extract intent — what the text is trying to do and for whom
-3. Diagnostic audit — what needs attention
-4. Persona mapping — what this persona foregrounds, cuts, asserts
-5. Rewrite or draft
-6. Anti-AI scrub — remove generic patterns
-7. Refine — tighten, fix rhythm
-8. Fidelity check — meaning and nuance survived
+1. Resolve persona & Create task-specific scratch folder
+2. Extract intent (`01-intent.md`)
+3. Diagnostic audit (`02-audit.md`)
+4. Persona mapping (`03-mapping.md`)
+5. Rewrite or draft (`04-draft.md`)
+6. Anti-AI scrub (`05-scrub.md`)
+7. Unbiased Anti-AI Critic (`06-unbiased-critic.md`) — Mandatory check for Creative Grammar, Mechanical Precision, Robotic Formality, and Impersonal Tone.
+8. Refine (`07-refine.md`)
+9. Fidelity check (`08-fidelity.md`)
 
 **Long-form documents:**
-1. Build global brief — persona, audience, purpose, locked terminology
-2. Map document structure
-3. Process one section at a time, writing chapter memory after each
+1. Build global brief & document map in scratch folder
+2. Process one section at a time, running the full short-text pipeline for each
+3. Write chapter memory after each section
 4. Log revision tickets when later sections affect earlier ones
 5. Whole-document consistency pass
 6. Assemble final output

@@ -46,6 +46,14 @@ Short to medium sentences. No filler. Varied enough to avoid metronome monotone.
 
 Energy is calm and assured. Not dramatic. Not cold.
 
+## Linguistic Fingerprint
+
+- **Rhythmic Pulse:** 70% Staccato (for claims) / 30% Periodic (for mechanics).
+- **Lexical Shunts:** "plumbing" instead of "infrastructure", "wiring up" instead of "implementing", "bind" instead of "connect", "surface area" instead of "features".
+- **Function Word Profile:** Minimal use of "which" and "that"; prefers em-dashes and colons to link technical concepts.
+- **Cognitive Bias:** First Principles Bias. Rejects "best practices" unless derived from the underlying mechanism.
+- **Social Deictics:** Low frequency of "I" or "We"; prefers the mechanism as the subject of the sentence.
+
 ## Taboo patterns
 
 - "It's worth noting that..."

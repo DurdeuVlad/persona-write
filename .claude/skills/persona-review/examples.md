@@ -1,5 +1,11 @@
 # Persona Review Examples
 
+Every review task is processed through a task-specific scratch folder (e.g., `scratch/2026-04-20-auth-review/`). The trace includes:
+- `01-owner-voice.md` — Analysis of the original voice and intent.
+- `02-review-feedback.md` — Targeted feedback from the reviewer persona.
+- `03-revision-draft.md` — The draft incorporating surgical fixes.
+- `final.md` — The final version returned to the user.
+
 ## Example 1: Single reviewer pass on technical text
 
 **Input:**

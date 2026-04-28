@@ -23,6 +23,20 @@ Authentication is a critical component of any modern application. It ensures tha
 - Name the real tradeoffs instead of gesturing at them
 - Compression: assume the reader knows what authentication is
 
+## Scratch Folder Trace
+
+The following files were created in `scratch/2026-04-20-auth-rewrite/`:
+
+- `01-intent.md` — Identified primary intent (inform/guide) and audience (developers).
+- `02-audit.md` — Noted generic opener, redundant definitions, and announcement filler.
+- `03-mapping.md` — Decided to lead with implementation choices and tradeoffs.
+- `04-draft.md` — Initial draft in pragmatic-builder voice.
+- `05-scrub.md` — Removed "it's important to note" and "in conclusion".
+- `06-unbiased-critic.md` — Critiqued robotic formality in the token explanation; added rhythmic shifts.
+- `07-refine.md` — Tightened the revocation explanation.
+- `08-fidelity.md` — Confirmed session/token tradeoffs are accurately represented.
+- `final.md` — Final version as shown below.
+
 ## Output
 
 **What changed:** Removed definition and generic importance framing. Restructured to lead with the decision. Named the actual tradeoff instead of describing it.

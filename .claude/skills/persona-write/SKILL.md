@@ -30,6 +30,17 @@ The goal is writing shaped by a specific attention model, compression level, and
 - Do not optimize for detector evasion.
 - Do not add fake human quirks like random typos or forced slang.
 
+## Scratch folder & Pipeline traceability
+
+To ensure the pipeline is followed and the user can see the internal reasoning, **every task must use a scratch folder.**
+
+1. **Create a task folder:** `scratch/YYYY-MM-DD-[task-slug]/`
+2. **Record every pass:** Each step in the pipeline (Intent, Audit, Mapping, etc.) must be written to its own `.md` file in that folder.
+3. **Number the files:** Use `01-intent.md`, `02-audit.md`, `03-mapping.md`, etc.
+4. **Final output:** Write the final draft to `final.md` in the same folder before returning it to the user.
+
+This applies to **all tasks**, including short rewrites. The scratch folder is gitignored.
+
 ## When to use this skill
 
 Use this skill when the user wants to:
@@ -143,23 +154,24 @@ Do not make the custom persona theatrical or exaggerated.
 
 ## Short-text workflow
 
-For short text, do this internally:
+For short text, process each step by writing to the scratch folder:
 
-1. **Resolve persona**
+1. **Resolve persona & Create task folder**
 2. **Infer mode**
-3. **Extract intent** — what the text is trying to do, who it is for, what must be preserved
-4. **Run a diagnostic audit** — identify filler, weak structure, generic assistant tone, over-explaining, fake neutrality, repetitive rhythm, corporate or managerial sludge
-5. **Map the persona onto the task** — what this persona would foreground, what it would cut, how it would handle certainty, rhythm, and emphasis
-6. **Draft or rewrite**
-7. **Run anti-AI scrub** — remove obvious generic phrases, padded transitions, excess symmetry, generic recap lines
-8. **Refine** — tighten, improve flow, restore natural human texture
-9. **Run fidelity check** — preserve meaning, preserve important nuance, avoid caricature, ensure persona fit
+3. **Extract intent** (`01-intent.md`) — what the text is trying to do, who it is for, what must be preserved
+4. **Run a diagnostic audit** (`02-audit.md`) — identify generic assistant patterns, filler, and structural tells.
+5. **Persona Immersion Mapping** (`03-mapping.md`) — Establish stance, word-pool (slang/shorthand), and structural intent.
+6. **Draft or rewrite** (`04-draft.md`) — Write through the immersion brief; prioritize internal logic over smooth flow.
+7. **Voice Scrub** (`05-scrub.md`) — Remove residual "brochure" language or neutral hedging that displaced the persona.
+8. **Refine** (`06-refine.md`) — Locally tighten and improve flow without global smoothing.
+9. **Run fidelity check** (`07-fidelity.md`) — preserve meaning and nuance.
+10. **Final output** (`final.md`)
 
 ## Long-form workflow
 
-If the input is a large document, do not rewrite it in one shot.
+If the input is a large document, do not rewrite it in one shot. Use the scratch folder for all artifacts.
 
-### Stage 0: Create a global brief
+### Stage 0: Create a global brief (`brief.md`)
 Create or infer:
 - persona
 - audience
@@ -170,7 +182,7 @@ Create or infer:
 - tone constraints
 - locked terminology
 
-### Stage 1: Create a document map
+### Stage 1: Create a document map (`map.md`)
 Identify:
 - major sections or chapters
 - the role of each section
@@ -179,47 +191,27 @@ Identify:
 - likely drift risks
 
 ### Stage 2: Process one section at a time
-For each section or chapter:
+For each section or chapter, write to the task folder:
 
-1. local intent extraction
-2. local diagnostic audit
-3. local persona mapping
-4. section rewrite
-5. anti-AI scrub
-6. local refinement
-7. fidelity check
-8. chapter memory artifact
+1. local intent extraction (`[section]-01-intent.md`)
+2. local diagnostic audit (`[section]-02-audit.md`)
+3. local persona immersion (`[section]-03-mapping.md`)
+4. section rewrite (`[section]-04-draft.md`)
+5. voice scrub (`[section]-05-scrub.md`)
+6. local refinement (`[section]-06-refine.md`)
+7. fidelity check (`[section]-07-fidelity.md`)
+8. chapter memory artifact (`[section]-memory.md`)
 
 ### Stage 3: Maintain rolling memory
 After each section, keep track of:
-- summary
-- key claims
-- terminology
-- tone notes
-- unresolved threads
-- promises made to the reader
-- style drift risks
-- possible upstream revisions
-
-### Stage 4: Create revision tickets when needed
+...
+### Stage 4: Create revision tickets when needed (`tickets.md`)
 If a later section changes framing, terminology, or argument shape:
-- note which earlier section is affected
-- describe the issue
-- recommend a targeted change
-
-Do not silently mutate everything at random.
-
-### Stage 5: Run a whole-document consistency pass
+...
+### Stage 5: Run a whole-document consistency pass (`consistency.md`)
 At the end, check:
-- persona consistency
-- tone consistency
-- terminology consistency
-- repeated ideas
-- intro/conclusion alignment
-- argument flow
-- unresolved contradictions
-
-### Stage 6: Assemble final output
+...
+### Stage 6: Assemble final output (`final.md`)
 Create the final Markdown document from the revised sections.
 
 ## Output handling
@@ -285,6 +277,7 @@ Preset persona definitions are in:
 - `passes/persona-mapping.md`
 - `passes/rewrite.md`
 - `passes/anti-ai-scrub.md`
+- `passes/unbiased-critic.md`
 - `passes/refine.md`
 - `passes/fidelity-check.md`
 

@@ -46,6 +46,14 @@ Short sentences. Occasionally one fragment for emphasis. No long chains of subor
 
 Energy is flat and direct, not cold. The flatness is a feature, not an accident.
 
+## Linguistic Fingerprint
+
+- **Rhythmic Pulse:** 90% Staccato / 10% Conversational.
+- **Lexical Shunts:** "ship" instead of "release", "grind" instead of "workflow", "cut" instead of "remove", "shim" instead of "adapter".
+- **Function Word Profile:** Zero use of "perhaps" or "seemingly"; avoids "that" as a connector.
+- **Cognitive Bias:** Speed Bias. Values "shipped code" over "perfect architecture."
+- **Social Deictics:** Minimal "I"; heavy use of imperative "You" or direct commands.
+
 ## Taboo patterns
 
 - Preamble that could be cut

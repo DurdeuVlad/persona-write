@@ -1,44 +1,47 @@
-# Anti-AI Writing Guidelines
+# Authentic Voice Guidelines
 
-Shared guidance for the diagnostic audit, anti-AI scrub, and persona-review passes.
+Shared guidance for producing writing that sounds like a specific person, not an average of training data.
 
-These guidelines describe patterns that make text feel generated rather than written. The goal is not to fool detectors. It is to produce writing that was shaped by a point of view, not assembled from averaged training signals.
-
----
-
-## How to use these guidelines
-
-Do not treat this as a banned-word list. Individual words rarely matter. Patterns matter. Clusters matter most.
-
-When multiple weak signals appear in the same sentence or paragraph, treat that as one strong signal. A sentence with "serves as," "leverages," "robust," and a balanced hedged ending does not have four small problems. It has one large problem.
-
-Apply judgment. Remove what makes the text feel empty or processed. Preserve what makes the text sound like the intended persona.
+The goal is **authenticity**, not detector evasion. When a voice is authentic, it naturally breaks the statistical patterns of "generic assistant" prose. 
 
 ---
 
-## Structural tells
+## The Path to Authenticity
 
-These are patterns in how the text is organized, not just what words it uses.
+Do not use mechanical rules to "humanize" text. Instead, focus on the **internal logic** of the persona.
 
-### Formulaic section shape
+### 1. Specificity of Vocabulary
+A "sharp-technical" persona doesn't just use "technical words"; they use the specific slang and shorthand of their niche. 
+- **Generic AI:** "Implement the authentication layer."
+- **Authentic Voice:** "Wire up the auth middleware."
+- **Rule:** Use the vocabulary that the persona’s background demands. Don't "de-optimize" for a detector; optimize for the character.
 
-Every section has the same structure: opening claim, three supporting points, summary sentence. This symmetry signals assembly, not thinking. Real argument does not always need three supporting points. Sometimes one concrete fact is enough. Sometimes the claim is the whole thing.
+### 2. Opinionated Logic
+Generic AI is balanced and neutral. Authentic people have a stance.
+- **Generic AI:** "While X has benefits, Y is also worth considering."
+- **Authentic Voice:** "The raw SDK is a grind. If you aren't using a framework, you're wasting cycles."
+- **Rule:** Pick a side. Let the persona’s stance drive the structure of the argument, not a "setup-middle-conclusion" template.
 
-### Repeated takeaway endings
+### 3. Rhythmic Intent
+Don't follow a "1-1-50" rule. Follow the **intent** of the sentence. 
+- If a point is simple, use a short sentence. 
+- If a mechanism is complex, use a dense, nested sentence that mirrors the complexity. 
+- **Rule:** Let the content dictate the rhythm. Human writing is "bursty" because human thought is uneven.
 
-Every paragraph ends with a sentence that restates the paragraph's main point. This treats the reader as incapable of retaining what they just read. It also produces a grinding rhythm — every paragraph lands the same way.
+---
 
-### Identical list shapes
+## Structural tells to avoid (The "Generic Assistant" Filter)
+...
+Grammatical structure is "too correct" but lacks the creative deviations or rhythmic shifts typical of human writing. Human writers use fragments, run-ons (for effect), and non-standard punctuation to manage pace. AI tends to stay strictly within the lines of a style guide.
 
-Lists where every item is the same length, same grammatical form, and covers equal conceptual weight. Real lists have uneven entries. Some items matter more. Some are simpler. Forced parallelism for its own sake signals generation.
+### 2. Mechanical Precision
+Word choice prioritizes dictionary-correctness and technical clarity over character, stance, or situational appropriateness. It avoids the "messy" but accurate idioms or colloquialisms that a specific persona would naturally use.
 
-### Significance inflation
+### 3. Robotic Formality
+The style is polished and orderly but lacks variation in intensity, register, or pace. It feels like a single, unbreaking formal seal across the entire document.
 
-Every point is "important," "critical," "key," "essential," or "fundamental." When everything is important, nothing is. Significance claims should be used sparingly and earned by the argument, not sprinkled as emphasis.
-
-### Setup-middle-summary structure at every scale
-
-Text that follows the same three-part shape at the paragraph level, section level, and document level simultaneously produces a fractal quality that feels processed. Real writing varies structure by scale and by what the content actually needs.
+### 4. Impersonal Tone
+Excessive use of indirect speech, third-person distancing ("one might argue"), and academic paraphrasing. It avoids assigning agency and hides the writer's actual position behind a mask of objectivity.
 
 ---
 

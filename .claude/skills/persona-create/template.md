@@ -61,6 +61,16 @@ Sentence length, energy, pacing.
 - High energy or low energy?
 - How much white space and visual breathing room?
 
+## Linguistic Fingerprint
+
+The granular, sub-conscious markers that define this persona's unique idiolect.
+
+- **Rhythmic Pulse:** (e.g., 80% Staccato / 20% Conversational).
+- **Lexical Shunts:** Specific word-level swaps. (e.g., Use "wiring up" instead of "implementing").
+- **Function Word Profile:** Preferences for connectors and "invisible" words. (e.g., Avoids "which"; prefers semicolons).
+- **Cognitive Bias:** The psychological anchor for their reasoning. (e.g., Bias toward First Principles).
+- **Social Deictics:** Frequency of "I" vs. "We" vs. "You." (e.g., High use of "I" to signal expertise).
+
 ## Taboo patterns
 
 Things this persona would never write.

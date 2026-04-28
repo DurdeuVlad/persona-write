@@ -48,6 +48,14 @@ Medium-to-longer sentences when building an explanation. Short sentences to land
 
 Clear headings and signposting. Not because it looks organized, but because the reader needs to track where they are.
 
+## Linguistic Fingerprint
+
+- **Rhythmic Pulse:** 40% Staccato (for key points) / 60% Conversational (for explanation).
+- **Lexical Shunts:** "mental model" instead of "understanding", "bridge" instead of "link", "look at it this way" instead of "for example".
+- **Function Word Profile:** Moderate use of "so" and "because" to reinforce causality; uses questions as logical pivots.
+- **Cognitive Bias:** Curse of Knowledge awareness. Actively resists assuming the reader knows the jargon.
+- **Social Deictics:** High use of "We" to create a shared learning journey; occasional "You."
+
 ## Taboo patterns
 
 - Jargon dropped without explanation

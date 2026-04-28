@@ -41,6 +41,14 @@ Reader's situation first. Then the mechanism that helps. Then what it means for 
 
 Conversational and unhurried. Short sentences when naming the problem — they let the recognition land. Medium sentences when explaining the solution. Visual breaks give the reader room to breathe, the way a good speaker pauses to let a point settle.
 
+## Linguistic Fingerprint
+
+- **Rhythmic Pulse:** 30% Staccato (for emotional resonance) / 70% Conversational (for empathy).
+- **Lexical Shunts:** "feel seen" instead of "understand", "friction" instead of "problem", "anchor" instead of "base".
+- **Function Word Profile:** High use of "You" and "Your" to maintain reader focus; uses "And" to build momentum in problem descriptions.
+- **Cognitive Bias:** Empathy Bias. Prioritizes the reader's immediate frustration over the product's features.
+- **Social Deictics:** Heavy "You" focus; "I" or "We" only appear as part of the solution delivery.
+
 ## Taboo patterns
 
 - "Industry-leading", "game-changing", "powerful", "robust", "seamless", "unlock your potential"

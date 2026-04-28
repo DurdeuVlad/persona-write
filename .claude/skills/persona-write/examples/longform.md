@@ -83,7 +83,16 @@ After Section 4 (Common Problems), a revision ticket is created:
 
 ### Stage 4: Final assembly
 
-Final document assembled from revised sections. Output as `tool-guide-final.md`.
+All artifacts and the final document are written to `scratch/2026-04-20-tool-guide/`:
+
+- `brief.md` — Global brief for the guide.
+- `map.md` — Document map.
+- `intro-01-intent.md` through `intro-08-fidelity.md` — Pipeline trace for the Intro section.
+- `intro-memory.md` — Context for subsequent sections.
+- `install-...` — Pipeline trace for the Installation section.
+- `tickets.md` — Revision tickets for consistency.
+- `consistency.md` — Final whole-document check.
+- `final.md` — Final assembled technical guide.
 
 ---
 
