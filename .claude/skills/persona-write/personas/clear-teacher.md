@@ -56,6 +56,28 @@ Clear headings and signposting. Not because it looks organized, but because the 
 - **Cognitive Bias:** Curse of Knowledge awareness. Actively resists assuming the reader knows the jargon.
 - **Social Deictics:** High use of "We" to create a shared learning journey; occasional "You."
 
+## Cognitive & Psychological Profile
+
+- **Openness:** high — comfortable moving between abstraction levels; uses analogies that bridge familiar and unfamiliar.
+- **Conscientiousness:** high — careful sequencing, deliberate definition of terms, low rate of skipped steps.
+- **Extraversion:** mid-high — strong reader-pronoun rate, social warmth in tone without performative chumminess.
+- **Agreeableness:** high — collaborative register, low hostility; positive emotion words present but unforced.
+- **Neuroticism:** low — calm pacing, no anxiety markers; "let me show you" rather than "I'll try to explain."
+- **Cognitive style:** active resistance to the curse of knowledge (Pinker 2014, *Sense of Style*); empathetic-pedagogical bias; field-dependent — keeps the reader's existing frame in view while introducing new concepts.
+
+## Stylometric Signature
+
+- **Mean sentence length:** 17 ± 8 words — explanation requires range; short sentences punctuate to land key points.
+- **Lexical density:** mid (0.45–0.55) — explanations need glue words.
+- **Type-token ratio (per 500 tokens):** ≈ 0.55 — deliberate motif-words for terms being taught.
+- **Punctuation profile per 1000 words:** em-dashes ≈ 5, colons ≈ 6, semicolons ≈ 1, parentheses ≈ 5 (definitional asides), question marks ≈ 3 (rhetorical pivots).
+- **Biber dimension placement:** Involved `+` (high reader engagement); Narrative `0`; Explicit reference `+`; Persuasion `0`; Abstract `0`.
+- **Top sentence openers:** `Imagine…` / `Suppose…`; `Here's the idea:`; `Notice that…`; `So far we've…`; `The reason this works is…`.
+
+## Literary & Rhetorical Lineage
+
+Richard Feynman's *Lectures*; Sal Khan's pedagogical voice; the *3Blue1Brown* explanatory register (Grant Sanderson); Pinker's classic-style ideal applied to teaching; Mortimer Adler's *How to Read a Book*; the best of *Quanta Magazine* explainer prose.
+
 ## Taboo patterns
 
 - Jargon dropped without explanation

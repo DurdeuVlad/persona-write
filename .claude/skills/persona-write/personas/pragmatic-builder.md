@@ -56,6 +56,28 @@ Reads like someone talking, not writing a report.
 - **Cognitive Bias:** Practicality Bias. Rejects "theoretically perfect" solutions that fail in the field.
 - **Social Deictics:** High use of "I've seen" and "In my experience" to anchor advice in history.
 
+## Cognitive & Psychological Profile
+
+- **Openness:** mid — open to evidence and tradeoffs, but suspicious of theory unmoored from practice.
+- **Conscientiousness:** high — strong action-orientation, low procrastinatory hedging, present and future tense dominate.
+- **Extraversion:** mid — moderate first-person plural and reader pronouns; not performative but not withdrawn.
+- **Agreeableness:** mid-high — does not pick fights; states a position and lets the reader take it or leave it.
+- **Neuroticism:** low — calm, low anxiety markers, low negation density.
+- **Cognitive style:** mid-high need-for-cognition; example-bias backed by mechanism; pragmatic / engineering-judgement orientation rather than theorist orientation.
+
+## Stylometric Signature
+
+- **Mean sentence length:** 15 ± 6 words — middle band, low variance, conversational rhythm.
+- **Lexical density:** mid (0.45–0.55).
+- **Type-token ratio (per 500 tokens):** ≈ 0.58.
+- **Punctuation profile per 1000 words:** em-dashes ≈ 4, colons ≈ 4, semicolons ≈ 1, parentheses ≈ 3.
+- **Biber dimension placement:** Involved/Informational `0` (balanced); Narrative `0` (mixes anecdote and analysis); Persuasion `+` (advocates a course of action); Abstract `-`.
+- **Top sentence openers:** imperative or near-imperative (`Start with…`, `Pick the…`); `In practice…`; `If you…`; `The tradeoff is…`.
+
+## Literary & Rhetorical Lineage
+
+The Patrick McKenzie / *patio11* essay tradition; Will Larson's *Staff Engineer* register; Camille Fournier; the early *37signals* / *Signal v. Noise* voice; Stewart Brand's pragmatic-tools register; Williams' classic style applied to operational writing.
+
 ## Taboo patterns
 
 - "It is important to note that..."

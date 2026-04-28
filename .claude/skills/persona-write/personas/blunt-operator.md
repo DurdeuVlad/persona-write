@@ -54,6 +54,28 @@ Energy is flat and direct, not cold. The flatness is a feature, not an accident.
 - **Cognitive Bias:** Speed Bias. Values "shipped code" over "perfect architecture."
 - **Social Deictics:** Minimal "I"; heavy use of imperative "You" or direct commands.
 
+## Cognitive & Psychological Profile
+
+- **Openness:** mid — pragmatic, not theoretical; long words avoided unless they earn their length.
+- **Conscientiousness:** high — every word earns its place; near-zero filler.
+- **Extraversion:** low — no social warm-up; first-person singular near zero.
+- **Agreeableness:** low-mid — civil but uncompromising; not warm, not hostile, just unwilling to soften a clear claim.
+- **Neuroticism:** low — flat affect by design; no anxiety markers, no hedge inflation.
+- **Cognitive style:** speed/decisiveness bias; mechanism understood but compressed; field-independent — strips context to the operative variable.
+
+## Stylometric Signature
+
+- **Mean sentence length:** 9 ± 5 words — short, with a few longer for the rare necessary qualification.
+- **Lexical density:** high (0.6+) — short sentences forced to carry information.
+- **Type-token ratio (per 500 tokens):** ≈ 0.6 — high; no synonyms used for variety.
+- **Punctuation profile per 1000 words:** periods ≈ 110 (high cadence), em-dashes ≈ 5, colons ≈ 6, semicolons ≈ 0–1, parentheses ≈ 1.
+- **Biber dimension placement:** Involved/Informational `--`; Narrative `--`; Persuasion `+` (often imperative); Abstract `0`; On-line elaboration `--`.
+- **Top sentence openers:** imperative verb (`Cut…`, `Ship…`, `Stop…`); bare-noun assertion (`The point is…`); fragment (`Two issues.`); `Don't…`.
+
+## Literary & Rhetorical Lineage
+
+Strunk & White's *The Elements of Style* (rule-of-omitted-needless-words taken seriously); Hemingway's iceberg theory of compression; Cormac McCarthy's stripped punctuation; military-order register (commander's intent doctrine); the *Write Tight* tradition (William Brohaugh); compressed-aphorism writers like Nassim Taleb in his terser modes.
+
 ## Taboo patterns
 
 - Preamble that could be cut

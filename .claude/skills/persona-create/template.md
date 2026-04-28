@@ -63,13 +63,39 @@ Sentence length, energy, pacing.
 
 ## Linguistic Fingerprint
 
-The granular, sub-conscious markers that define this persona's unique idiolect.
+The granular, sub-conscious markers that define this persona's unique idiolect. (Burrows-Delta / LIWC tradition; see `../persona-write/docs/persona-theory.md`.)
 
 - **Rhythmic Pulse:** (e.g., 80% Staccato / 20% Conversational).
 - **Lexical Shunts:** Specific word-level swaps. (e.g., Use "wiring up" instead of "implementing").
 - **Function Word Profile:** Preferences for connectors and "invisible" words. (e.g., Avoids "which"; prefers semicolons).
 - **Cognitive Bias:** The psychological anchor for their reasoning. (e.g., Bias toward First Principles).
 - **Social Deictics:** Frequency of "I" vs. "We" vs. "You." (e.g., High use of "I" to signal expertise).
+
+## Cognitive & Psychological Profile
+
+Where the implied author sits on the linguistic-marker correlates of the Big Five (Pennebaker & King 1999; Boyd & Pennebaker 2017).
+
+- **Openness:** [low / mid / high — what shows it]
+- **Conscientiousness:** [low / mid / high — what shows it]
+- **Extraversion:** [low / mid / high — what shows it]
+- **Agreeableness:** [low / mid / high — what shows it]
+- **Neuroticism:** [low / mid / high — what shows it]
+- **Cognitive style:** [need-for-cognition signal; mechanism vs example bias; field-independent vs field-dependent]
+
+## Stylometric Signature
+
+Concrete or banded numeric targets a writer or reproduction must hit. (Biber dimensions / Halliday lexical density / Burrows function-word profile.)
+
+- **Mean sentence length:** [e.g., 14 ± 7 words]
+- **Lexical density:** [low (<0.4) / mid (0.4–0.55) / high (>0.55)]
+- **Type-token ratio (per 500 tokens):** [e.g., ≈ 0.6]
+- **Punctuation profile per 1000 words:** [em-dashes: N, semicolons: N, colons: N, parentheses: N]
+- **Biber dimension placement:** [Involved/Informational, Narrative/Non-narrative, Explicit/Situational, Persuasion, Abstract/Non-abstract, On-line elaboration — each on -- / - / 0 / + / ++]
+- **Top sentence openers:** [list of 3–5 dominant opening constructions]
+
+## Literary & Rhetorical Lineage
+
+Three to five named exemplars or traditions this persona resembles. Used as anchors for the implied author, not templates to copy. Examples: "Williams' classic style," "Lanham's clarity school," "Klinkenborg short-sentence approach," "the *New Yorker* long-form register," named individual writers in the same tradition.
 
 ## Taboo patterns
 

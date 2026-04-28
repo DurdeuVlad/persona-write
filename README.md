@@ -8,7 +8,7 @@ Give Claude Code a persona and it writes from that person's point of view — th
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-skill-blue)](https://claude.ai/code)
-[![Version](https://img.shields.io/badge/version-2.0.0-green)]()
+[![Version](https://img.shields.io/badge/version-2.1.0-green)]()
 
 </div>
 
@@ -26,14 +26,15 @@ Persona Write gives Claude Code a real working persona — not a style hint, but
 
 ## What you get
 
-A Claude Code skill set with four commands:
+A Claude Code skill set with five commands:
 
 - **`/persona-write`** — draft, rewrite, audit, or refine text in a target persona; supports multi-persona chains
 - **`/persona-review`** — review text through a specific reviewer persona, applying targeted surgical fixes
+- **`/persona-copy`** — extract a writer's style from sample texts and reproduce a new piece at matched quality, verified against a research-backed rubric
 - **`/persona-list`** — browse the available personas with plain-English descriptions
 - **`/persona-create`** — describe what you need in plain language and build a custom persona
 
-Six personas ship with the repo. You can add your own.
+Six personas ship with the repo. Each is grounded in stylometry, writing-quality rubrics, rhetoric, and personality–linguistics research — see [`persona-theory.md`](.claude/skills/persona-write/docs/persona-theory.md). You can add your own.
 
 Short text goes through a 7-pass pipeline. Long documents are handled section by section with rolling state, so voice stays consistent from the first page to the last.
 
@@ -60,6 +61,7 @@ Already have `.claude/skills/`?
 ```bash
 cp -r persona-write/.claude/skills/persona-write /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-review /your-project/.claude/skills/
+cp -r persona-write/.claude/skills/persona-copy /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-list /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-create /your-project/.claude/skills/
 ```
@@ -113,6 +115,16 @@ Standalone review through one persona lens, without full rewrite:
 /persona-review clear-teacher:
 [paste text written by sharp-technical]
 ```
+
+Reproduce another writer's style from sample texts:
+
+```
+/persona-copy
+Here are five essays I've written. Write a sixth one in the same style on this topic: ...
+[paste 5 essays]
+```
+
+Output is verified against a research-backed rubric (Education Northwest 6+1 Trait + Hyland stance/engagement) and a stylometric fingerprint match. The extracted persona can be saved as a reusable preset.
 
 ---
 
@@ -191,9 +203,16 @@ Final output reads as the first persona's work. Reviewers improve it; they do no
     docs/           ← review principles, reviewer pairings
     examples.md
 
+  persona-copy/     ← extract a writer's style from samples and reproduce at matched quality
+    pipeline.md     ← 11-pass workflow: sample audit → fingerprint → implied author → draft → verify
+    template.md     ← extracted-persona file template
+    examples.md
+
   persona-list/     ← browse and explain personas
-  persona-create/   ← build a custom persona
+  persona-create/   ← build a custom persona, research-backed schema
 ```
+
+The research foundation lives in [`.claude/skills/persona-write/docs/persona-theory.md`](.claude/skills/persona-write/docs/persona-theory.md) and the verification rubric in [`.claude/skills/persona-write/docs/writing-quality-rubric.md`](.claude/skills/persona-write/docs/writing-quality-rubric.md). Both are referenced by every persona file and by `persona-copy`.
 
 ---
 

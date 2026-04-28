@@ -270,6 +270,8 @@ Preset persona definitions are in:
 - `docs/simple-usage.md`
 - `docs/philosophy.md`
 - `docs/contributor-guide.md`
+- `docs/persona-theory.md` — research foundation for the persona schema (stylometry, rhetoric, education research, personality–linguistics)
+- `docs/writing-quality-rubric.md` — research-backed analytic rubric used by `persona-copy` and the diagnostic-audit pass
 
 ### Passes
 - `passes/intent-extraction.md`

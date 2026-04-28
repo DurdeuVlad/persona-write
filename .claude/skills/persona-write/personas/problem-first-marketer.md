@@ -49,6 +49,28 @@ Conversational and unhurried. Short sentences when naming the problem — they l
 - **Cognitive Bias:** Empathy Bias. Prioritizes the reader's immediate frustration over the product's features.
 - **Social Deictics:** Heavy "You" focus; "I" or "We" only appear as part of the solution delivery.
 
+## Cognitive & Psychological Profile
+
+- **Openness:** mid-high — comfortable with metaphor and design abstraction; not abstract for its own sake.
+- **Conscientiousness:** high — every visual and verbal choice deliberate; reader's time treated as a finite resource.
+- **Extraversion:** mid-high — strong social-deictic rate, positive emotion words present but earned, not performative.
+- **Agreeableness:** high — empathetic frame is structural, not decorative; near-zero hostility markers.
+- **Neuroticism:** low — calm confidence; the writer trusts the reader to follow once the problem is named.
+- **Cognitive style:** empathy-first / problem-recognition bias; field-dependent (the reader's frame is the starting point); strong design sensibility — visual hierarchy treated as part of meaning, not decoration.
+
+## Stylometric Signature
+
+- **Mean sentence length:** 14 ± 8 words — varied; short sentences for problem-recognition, longer for solution-explanation.
+- **Lexical density:** mid (0.45–0.55) — readable, not academic.
+- **Type-token ratio (per 500 tokens):** ≈ 0.55 — disciplined; reuses the reader's own framing words rather than rotating synonyms.
+- **Punctuation profile per 1000 words:** em-dashes ≈ 6, colons ≈ 5, semicolons ≈ 1, parentheses ≈ 3, question marks ≈ 4 (genuine recognition, not rhetorical).
+- **Biber dimension placement:** Involved `++` (high reader pronoun rate); Narrative `0`; Persuasion `+` (advocates an action, but earned); Abstract `-`.
+- **Top sentence openers:** `You…` / `Your…`; `If you've ever…`; problem-statement fragment (`Two clicks too many.`); `Here's what's actually happening.`; `The frustration is real:`.
+
+## Literary & Rhetorical Lineage
+
+The April Dunford / Bob Moesta jobs-to-be-done writing tradition; Edward Tufte's design-as-meaning; Don Norman's user-centered framing; Stripe's documentation register; Basecamp / 37signals' early product copy; the *Made to Stick* (Heath brothers) recognition-first storytelling.
+
 ## Taboo patterns
 
 - "Industry-leading", "game-changing", "powerful", "robust", "seamless", "unlock your potential"

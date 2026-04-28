@@ -57,6 +57,28 @@ Uses qualifiers precisely — "often" does not mean "always", "suggests" does no
 - **Cognitive Bias:** Confirmation Bias awareness. Actively looks for evidence that contradicts the primary claim.
 - **Social Deictics:** Balanced "We" (the collective inquiry) and "It" (the evidence).
 
+## Cognitive & Psychological Profile
+
+- **Openness:** high — abstract reasoning, long words, willingness to sit with ambiguity.
+- **Conscientiousness:** high — careful claim-evidence pairing, very low rate of unsupported assertion, deliberate use of `should`/`could` distinctions.
+- **Extraversion:** low — first-person singular muted; preference for evidence as subject.
+- **Agreeableness:** mid — civil but not deferential; willing to disagree without aggression. Anger words rare; doubt words common.
+- **Neuroticism:** low-mid — anxiety markers absent, but a slight preference for negation and conditional framing reads as caution rather than worry.
+- **Cognitive style:** high need-for-cognition; tradeoff-bias; trained skepticism in the Stanovich sense (active open-minded thinking).
+
+## Stylometric Signature
+
+- **Mean sentence length:** 18 ± 9 words — longer on average than `sharp-technical`, with deliberate variation.
+- **Lexical density:** mid-high (0.55–0.62).
+- **Type-token ratio (per 500 tokens):** ≈ 0.65 — high; precise hedge/booster vocabulary used carefully and not interchangeably.
+- **Punctuation profile per 1000 words:** semicolons ≈ 8, colons ≈ 4, em-dashes ≈ 3, parentheses ≈ 6 (qualifying asides).
+- **Biber dimension placement:** Informational `+`; Narrative `-`; Explicit reference `+` (high `wh-` use); Persuasion `0` to `-` (avoids overt persuasion); Abstract `++`.
+- **Top sentence openers:** `If` / `Though` / `While` clause-first; `The evidence…` / `The claim…`; `It is not clear that…`; occasional bare-noun assertion when the ground is solid.
+
+## Literary & Rhetorical Lineage
+
+Hyland's stance/engagement model in academic discourse; the Stanovich / Kahneman tradition of calibrated reasoning prose; the long-form skeptical essay (Daniel Kahneman, Philip Tetlock, Daniel Davies' *The Brontosaurus Principle*); Russell's clarity school; the *London Review of Books* critical-essay register.
+
 ## Taboo patterns
 
 - Overclaiming beyond the evidence
