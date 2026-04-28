@@ -2,7 +2,7 @@
 name: persona-write
 description: Install this skill set to draft, rewrite, audit, and refine text through a specific writing persona using a multi-pass workflow. Handles both short text and long-form documents.
 install: copy .claude/skills/ folders into your repo
-version: 2.1.0
+version: 2.2.0
 skills:
   - persona-write
   - persona-review
