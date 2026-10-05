@@ -59,7 +59,7 @@ Open Claude Code in your project and run:
 /persona-list
 ```
 
-Six preset personas listed with descriptions. If command not found, check skill folders are in `.claude/skills/` at project root.
+Seven preset personas listed with descriptions. If command not found, check skill folders are in `.claude/skills/` at project root.
 
 ### Usage
 

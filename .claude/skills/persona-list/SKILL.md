@@ -38,6 +38,9 @@ Very direct, compressed, minimal ceremony. Good for tactical writing, tight rewr
 ### problem-first-marketer
 Problem-first, design-aware. Leads with the reader's frustration before the product. Good for READMEs, landing pages, product docs, and any writing that needs to earn attention before asking for action. Treats visual hierarchy and whitespace as part of the message — a soulless layout kills interest before a word is read. Pick this if you want writing that makes the reader feel understood, then gives them a reason to care.
 
+### quiet-witness
+Close-third, present-tense scene voice. Dramatizes technical friction through ordinary domestic or work action instead of exposition. Good for narrative-nonfiction cold openers and story beats, not explainer prose. Pick this if you want a scene the reader watches rather than a point the reader is told.
+
 ## Guidance
 
 If the user seems unsure, help them choose by asking what they want the writing to feel like:

@@ -44,7 +44,7 @@ A Claude Code skill set with five commands:
 - **`/persona-list`** — browse the available personas with plain-English descriptions
 - **`/persona-create`** — describe what you need in plain language and build a custom persona
 
-Six personas ship with the repo. Each is grounded in stylometry, writing-quality rubrics, rhetoric, and personality–linguistics research — see [`persona-theory.md`](.claude/skills/persona-write/docs/persona-theory.md). You can add your own.
+Seven personas ship with the repo. Each is grounded in stylometry, writing-quality rubrics, rhetoric, and personality–linguistics research — see [`persona-theory.md`](.claude/skills/persona-write/docs/persona-theory.md). You can add your own.
 
 Short text goes through a 7-pass pipeline. Long documents are handled section by section with rolling state, so voice stays consistent from the first page to the last.
 
@@ -156,6 +156,7 @@ Output is verified against a research-backed rubric (Education Northwest 6+1 Tra
 | `skeptical-analyst` | Careful, evidence-aware, notices weak assumptions |
 | `blunt-operator` | Maximum compression, no ceremony |
 | `problem-first-marketer` | Warm, problem-first, design-aware — earns attention before asking for action |
+| `quiet-witness` | Close-third, present-tense scenes; shows technical friction through action, never exposition |
 
 ```
 /persona-list          # see all personas with full descriptions
@@ -219,7 +220,7 @@ Why length-driven and not always-on: see [`voice-guide.md`](.claude/skills/perso
 ```
 .claude/skills/
   persona-write/
-    personas/       ← 6 preset persona definitions (add your own here)
+    personas/       ← 7 preset persona definitions (add your own here)
     passes/         ← 7 internal pass definitions
     longform/       ← 6 long-form workflow modules
     dictionaries/   ← banned phrases, manager speak, AI patterns

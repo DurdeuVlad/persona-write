@@ -122,6 +122,7 @@ List the preset options in plain English:
 - **skeptical-analyst**: careful, critical, evidence-aware
 - **blunt-operator**: very direct, minimal ceremony
 - **problem-first-marketer**: problem-first, design-aware, earns attention before asking for action
+- **quiet-witness**: close-third, present-tense scenes; friction shown through action, never exposition
 
 Also allow a plain-language custom persona, for example:
 
@@ -280,6 +281,7 @@ Preset persona definitions are in:
 - `personas/skeptical-analyst.md`
 - `personas/blunt-operator.md`
 - `personas/problem-first-marketer.md`
+- `personas/quiet-witness.md`
 
 ## Supporting modules
 
