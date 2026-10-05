@@ -8,7 +8,7 @@ Give Claude Code a persona and it writes from that person's point of view — th
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-skill-blue)](https://claude.ai/code)
-[![Version](https://img.shields.io/badge/version-2.2.0-green)]()
+[![Version](https://img.shields.io/badge/version-2.2.1-green)]()
 
 </div>
 

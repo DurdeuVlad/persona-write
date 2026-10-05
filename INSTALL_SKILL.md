@@ -2,7 +2,7 @@
 name: persona-write
 description: Install this skill set to draft, rewrite, audit, and refine text through a specific writing persona using a multi-pass workflow. Handles both short text and long-form documents.
 install: npx skills add DurdeuVlad/persona-write
-version: 2.2.0
+version: 2.2.1
 skills:
   - persona-write
   - persona-review

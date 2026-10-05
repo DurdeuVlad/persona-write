@@ -1,0 +1,59 @@
+name: CI
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Skills have name + description frontmatter matching folder
+        run: |
+          for f in .claude/skills/*/SKILL.md; do
+            d=$(basename "$(dirname "$f")")
+            head -1 "$f" | grep -qx -- '---' || { echo "$f: no frontmatter"; exit 1; }
+            grep -qx "name: $d" "$f" || { echo "$f: name != $d"; exit 1; }
+            grep -q '^description: .\+' "$f" || { echo "$f: no description"; exit 1; }
+          done
+      - name: Persona count matches docs
+        run: |
+          n=$(ls .claude/skills/persona-write/personas/*.md | wc -l)
+          for p in $(ls .claude/skills/persona-write/personas/*.md); do
+            b=$(basename "$p" .md)
+            grep -q "$b" README.md || { echo "README missing $b"; exit 1; }
+            grep -q "$b" .claude/skills/persona-list/SKILL.md || { echo "persona-list missing $b"; exit 1; }
+          done
+          echo "$n personas OK"
+      - name: Versions agree
+        run: |
+          v=$(node -p "require('./package.json').version")
+          grep -q "^version: $v" INSTALL_SKILL.md || { echo "INSTALL_SKILL.md version != $v"; exit 1; }
+          grep -q "version-$v-green" README.md || { echo "README badge != $v"; exit 1; }
+          grep -q "\"version\": \"$v\"" .claude-plugin/plugin.json || { echo "plugin.json != $v"; exit 1; }
+          if [ "${GITHUB_REF_TYPE}" = tag ]; then [ "${GITHUB_REF_NAME}" = "v$v" ] || { echo "tag != v$v"; exit 1; }; fi
+
+  release:
+    needs: validate
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" --generate-notes
+      # npm publish runs only if an NPM_TOKEN repo secret exists
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+      - name: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ -n "$NODE_AUTH_TOKEN" ]; then npm publish --access public; else echo "NPM_TOKEN not set, skipping"; fi

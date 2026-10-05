@@ -1,0 +1,10 @@
+{
+  "name": "persona-write",
+  "version": "2.2.1",
+  "description": "Agent skills for drafting, rewriting, and reviewing text through a specific writing persona.",
+  "keywords": ["agent-skills", "claude-code", "skills", "writing", "persona"],
+  "author": "Dwurdy Studios",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/DurdeuVlad/persona-write.git" },
+  "files": [".claude/skills", ".claude-plugin", "README.md", "INSTALL_SKILL.md", "LICENSE"]
+}

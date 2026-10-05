@@ -1,0 +1,12 @@
+{
+  "name": "dwurdy-studios",
+  "description": "Writing-persona skills by Dwurdy Studios.",
+  "owner": { "name": "Dwurdy Studios" },
+  "plugins": [
+    {
+      "name": "persona-write",
+      "source": "./",
+      "description": "Draft, rewrite, review, and clone writing voices through specific personas."
+    }
+  ]
+}
