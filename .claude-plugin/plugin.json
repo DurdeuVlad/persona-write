@@ -1,6 +1,6 @@
 {
   "name": "persona-write",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Draft, rewrite, review, and clone writing voices through specific personas.",
   "author": { "name": "Dwurdy Studios" },
   "license": "MIT",
