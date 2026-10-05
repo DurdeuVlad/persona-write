@@ -62,7 +62,15 @@ V2 adds **persona chain mode**: one persona writes, another reviews and applies 
 ## Install
 
 ```bash
-git clone https://github.com/your-org/persona-write.git
+npx skills add DurdeuVlad/persona-write
+```
+
+Add `-g` to install globally, or `--skill persona-write` to install just one skill.
+
+Prefer to copy files by hand?
+
+```bash
+git clone https://github.com/DurdeuVlad/persona-write.git
 cp -r persona-write/.claude /your-project/.claude
 ```
 

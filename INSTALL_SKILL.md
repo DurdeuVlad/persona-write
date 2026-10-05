@@ -1,7 +1,7 @@
 ---
 name: persona-write
 description: Install this skill set to draft, rewrite, audit, and refine text through a specific writing persona using a multi-pass workflow. Handles both short text and long-form documents.
-install: copy .claude/skills/ folders into your repo
+install: npx skills add DurdeuVlad/persona-write
 version: 2.2.0
 skills:
   - persona-write
@@ -22,6 +22,14 @@ skills:
 - [Claude Code](https://claude.ai/code)
 
 ### Install
+
+```bash
+npx skills add DurdeuVlad/persona-write
+```
+
+Add `-g` for a global install, or `--skill <name>` to install a single skill.
+
+**Manual install (no CLI):**
 
 ```bash
 git clone https://github.com/DurdeuVlad/persona-write.git
