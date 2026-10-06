@@ -8,6 +8,8 @@ Before any section is touched, the global brief establishes what the document is
 
 Without a global brief, persona and voice drift by section three.
 
+The style sheet (`00-style-sheet.md`, see `../passes/style-sheet.md`) sits beside the brief and carries its locked terminology and naming decisions.
+
 ## What to include
 
 ### Persona

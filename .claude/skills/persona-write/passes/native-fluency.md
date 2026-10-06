@@ -15,7 +15,7 @@ Someone who writes the target language natively and knows how this genre is writ
 1. **Name the target** — language, locale, genre, reader, register (formal or informal, address form). If the user gave none, infer and state it.
 2. **Read as a native reader.** Mark every phrase that reads as translated: word order copied from English, a noun where the language prefers a verb, a literal idiom, a connector the genre does not use, an English sentence rhythm.
 3. **Replace each marked phrase** with the construction a native writer would use. Change the form, keep the content.
-4. **Set the conventions of the locale:** quotation marks, diacritics, date and number formats, honorifics, capitalisation, punctuation.
+4. **Set the conventions of the locale:** quotation marks, diacritics, date and number formats, honorifics, capitalisation, punctuation. Take them from the style sheet when it records them, and add them when it does not.
 5. **Check the register end to end.** One address form and one level of formality from first line to last.
 6. **Hand off to the word check.** Facts, numbers, names, and claims stay exactly as they were.
 

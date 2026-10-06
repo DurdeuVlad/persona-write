@@ -55,7 +55,7 @@ Run all passes in-context. Return the result inline with a one or two sentence n
 ### Scratch mode
 
 1. **Create a task folder:** `scratch/YYYY-MM-DD-[task-slug]/`
-2. **Record each pass to its own numbered `.md` file:** `01-intent.md`, `02-audit.md`, `03-mapping.md`, `04a-skeleton.md`, `04b-sentences.md`, `04-draft.md`, `05-coherence.md`, `06-refine.md`, `06b-native.md`, `06c-wordcheck.md`, `07-fidelity.md`, `final.md` (and `00-research.md` when `/persona-research` ran).
+2. **Record each pass to its own numbered `.md` file:** `01-intent.md`, `02-audit.md`, `03-mapping.md`, `04a-skeleton.md`, `04b-sentences.md`, `04-draft.md`, `05-coherence.md`, `06-refine.md`, `06b-native.md`, `06c-wordcheck.md`, `07-fidelity.md`, `final.md` (and `00-style-sheet.md`, plus `00-research.md` when `/persona-research` ran).
 3. The scratch folder is gitignored.
 
 The reasoning, with cross-model experimental evidence, is in `docs/voice-guide.md`. The underlying principle is in `docs/philosophy.md`.
@@ -180,7 +180,7 @@ The pass sequence (whether materialized to scratch or held in memory):
 
 1. **Resolve persona** — load the persona file. Hold its Identity, Rhythm, and Stylometric Signature as the brief.
 2. **Infer mode** — draft / rewrite / audit / refine / longform.
-3. **Extract intent** — what the text is trying to do, who it is for, what must be preserved.
+3. **Extract intent and open the style sheet** — what the text is trying to do, who it is for, what must be preserved; record the decisions on terms, names, numbers, and register in `00-style-sheet.md`. Every later pass reads it. See `passes/style-sheet.md`.
 4. **Run a diagnostic audit** (persona-fit only) — identify drift from the persona's positive shape. **Do not enumerate generic AI patterns**; see `docs/voice-guide.md`.
 5. **Persona immersion mapping** — stance, word-pool (the persona's Lexical Shunts), structural intent.
 6. **Build sentence by sentence** — plan the claims first, then write, check, and fix one sentence at a time through the immersion brief. The text grows one sentence at a time from the skeleton. See `passes/sentence-build.md`.
@@ -303,6 +303,7 @@ Preset persona definitions are in:
 
 ### Passes
 - `passes/intent-extraction.md`
+- `passes/style-sheet.md`
 - `passes/diagnostic-audit.md`
 - `passes/persona-mapping.md`
 - `passes/sentence-build.md`

@@ -40,7 +40,7 @@ Ask both of every sentence, then of every content word and phrase in it.
 
 ## Method
 
-1. Read one sentence at a time, in order.
+1. Read the style sheet (`00-style-sheet.md`) if there is one, then read one sentence at a time, in order. A term or name the sheet settles needs no second look; a new decision is added to the sheet.
 2. For each content word and phrase, answer both questions. Most pass. Do not list those.
 3. When unsure about meaning, collocation, or government, check a source (a dictionary for the language, such as DEX for Romanian; a corpus or a search of real usage) before deciding. A source is a dictionary entry, a corpus, or a real-use page that was opened. If no source can be reached, keep the word, mark it **unverified** in the table, and list it for the user. A word missing from the dictionary is not a failure by itself: look for real use (a corpus, news or institutional pages) and, if found, keep it and cite that use; if not found, mark it **unverified**.
 4. Flag a word or sentence only when it fails a question. Record the item, the question it failed, and the fix.
