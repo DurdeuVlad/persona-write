@@ -10,6 +10,8 @@ This is a lighter pass. Do not re-diagnose. Do not re-structure. Work at the sen
 
 ## What to do
 
+Read the style sheet (`00-style-sheet.md`) first, if there is one. A tightened sentence keeps the terms, names, numbers, and register it records.
+
 ### Tighten sentences
 Are there words that are doing no work?
 

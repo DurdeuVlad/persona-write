@@ -49,6 +49,7 @@ Then read each paragraph aloud as the reader would. Where short sentences stack 
 - Keeps one idea per sentence. Parallel parts of one idea ("some ... others ...") share a sentence. How many claims a sentence carries follows the persona's Rhythm model; one claim per skeleton line is the planning unit, not a sentence-length rule.
 - Builds forward from the skeleton and writes each later sentence when its turn comes.
 - Keeps the one sentence before in view while building; earlier sentences are reopened in the revise stage.
+- Reads the style sheet (`00-style-sheet.md`) before the first sentence and applies its rows on terms, numbers, names, and register. Adds a row when a new decision is made.
 - Takes facts, numbers, and names from the listed source.
 - Gives titles, program names, and terms the user supplied their own form and language. When a dictionary is silent or lists a different sense, keeps the term and flags it for the user.
 - Keeps the qualifier the reader needs (a level, a date, a scope) when a limit on details clashes with it, and drops another detail.

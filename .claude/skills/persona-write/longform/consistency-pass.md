@@ -26,7 +26,7 @@ Tone can shift in ways persona does not. A document can maintain the right perso
 ### Terminology consistency
 Are the same terms used for the same concepts throughout?
 
-Check terms locked in the global brief. Also check terms that were established in chapter memory entries. Look for:
+Check the Terms and Names rows of the style sheet (`00-style-sheet.md`). Also check terms that were established in chapter memory entries. Look for:
 - synonyms used for the same concept in different sections
 - terms used more precisely in some sections than others
 - any term that has drifted in definition from its first use

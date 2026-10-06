@@ -8,6 +8,8 @@ Voice work can drift meaning. Compression can drop necessary nuance. Persona car
 
 ## What to check
 
+Read the style sheet (`00-style-sheet.md`) first, if there is one: its Terms, Names, and Numbers rows are part of what the text must still say and show.
+
 ### Meaning preservation
 Does the rewrite convey the same information and argument as the original?
 
