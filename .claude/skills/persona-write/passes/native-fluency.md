@@ -4,7 +4,7 @@
 
 Make the finished text read as if a native writer of the target language wrote it for this reader.
 
-Runs automatically after `refine` and before `fidelity-check`, whenever the text is in a language other than the one the persona files are written in (English), or the user names a target language. Skip it for English-only work.
+Runs automatically after `refine` and before the word check (`persona-wordcheck`) and `fidelity-check`, whenever the text is in a language other than the one the persona files are written in (English), or the user names a target language. Skip it for English-only work.
 
 ## The writer this pass makes
 
@@ -17,7 +17,7 @@ Someone who writes the target language natively and knows how this genre is writ
 3. **Replace each marked phrase** with the construction a native writer would use. Change the form, keep the content.
 4. **Set the conventions of the locale:** quotation marks, diacritics, date and number formats, honorifics, capitalisation, punctuation.
 5. **Check the register end to end.** One address form and one level of formality from first line to last.
-6. **Hand off to `fidelity-check`.** Facts, numbers, names, and claims stay exactly as they were.
+6. **Hand off to the word check.** Facts, numbers, names, and claims stay exactly as they were.
 
 ## Output
 

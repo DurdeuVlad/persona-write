@@ -87,7 +87,7 @@ cp -r persona-write/.claude/skills/persona-copy /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-list /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-create /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-brief /your-project/.claude/skills/
-cp -r persona-write/.claude/skills/persona-wordcheck /your-project/.claude/skills/
+cp -r persona-write/.claude/skills/persona-wordcheck /your-project/.claude/skills/   # persona-write calls it at pipeline step 10
 cp -r persona-write/.claude/skills/persona-research /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-localize /your-project/.claude/skills/
 ```

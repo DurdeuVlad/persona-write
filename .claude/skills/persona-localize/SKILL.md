@@ -28,7 +28,7 @@ If the genre or register is unclear and it changes the result, ask one question.
 1. Build a locale profile: register and address form, genre structure, quotation marks, diacritics, date, number and currency formats, units, titles and honorifics. Use `/persona-research` if the genre norms are not known.
 2. Separate content from wording: list the facts, numbers, and names that stay fixed.
 3. Rewrite in the target language from the facts and the profile, in the chosen persona's voice (via `/persona-write`).
-4. Run the `native-fluency` pass from `persona-write/passes/native-fluency.md`.
+4. Run the `native-fluency` pass from `persona-write/passes/native-fluency.md`, unless step 3 went through `/persona-write`, which already runs it.
 5. Check fidelity: every fact in the list is present and unchanged.
 
 ## Output

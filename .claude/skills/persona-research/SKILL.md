@@ -50,4 +50,4 @@ With scratch in use, save as `00-research.md`.
 ## Pairing
 
 - Feeds `/persona-brief` (what the reader knows and needs) and `/persona-localize` (locale profile).
-- Does not write the text and does not change any claim.
+- Writes no text and changes no claim.

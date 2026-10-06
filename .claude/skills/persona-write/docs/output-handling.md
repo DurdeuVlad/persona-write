@@ -57,9 +57,13 @@ Markdown is the canonical working format.
 - `01-intent.md`
 - `02-audit.md`
 - `03-mapping.md`
+- `04a-skeleton.md`
+- `04b-sentences.md`
 - `04-draft.md`
 - `05-coherence.md`
 - `06-refine.md`
+- `06b-native.md`
+- `06c-wordcheck.md`
 - `07-fidelity.md`
 - `final.md`
 
