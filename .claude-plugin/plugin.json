@@ -13,7 +13,10 @@
     "./.claude/skills/persona-copy",
     "./.claude/skills/persona-list",
     "./.claude/skills/persona-create",
-    "./.claude/skills/persona-brief"
+    "./.claude/skills/persona-brief",
+    "./.claude/skills/persona-localize",
+    "./.claude/skills/persona-research",
+    "./.claude/skills/persona-wordcheck"
   ],
   "icon": "./.claude-plugin/icon.png",
   "keywords": [

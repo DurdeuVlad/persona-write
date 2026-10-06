@@ -4,6 +4,8 @@
 
 Produce the rewritten text using the persona mapping and diagnostic findings as the operating brief.
 
+The text is built one sentence at a time, following `sentence-build.md`; this file gives the principles each sentence follows.
+
 This is where the actual writing happens. Everything before this was diagnosis and planning. Everything after is cleanup and verification.
 
 ## What to do

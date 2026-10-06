@@ -36,13 +36,16 @@ Everything in this project follows from that claim — the pipeline runs persona
 
 ## What you get
 
-A Claude Code skill set with six commands:
+A Claude Code skill set with nine commands:
 
 - **`/persona-write`** — draft, rewrite, audit, or refine text in a target persona; supports multi-persona chains
 - **`/persona-review`** — review text through a specific reviewer persona, applying targeted surgical fixes
 - **`/persona-copy`** — extract a writer's style from sample texts and reproduce a new piece at matched quality, verified against a research-backed rubric
 - **`/persona-list`** — browse the available personas with plain-English descriptions
 - **`/persona-create`** — describe what you need in plain language and build a custom persona
+- **`/persona-localize`** — adapt a text to another language or locale so it reads as native
+- **`/persona-research`** — research genre norms and check claims against sources before writing
+- **`/persona-wordcheck`** — check every word and sentence for fit to the context and correct use in the target language
 - **`/persona-brief`** — build a short reader brief (what the reader knows, needs, and should do) before drafting
 
 Seven personas ship with the repo. Each is grounded in stylometry, writing-quality rubrics, rhetoric, and personality–linguistics research — see [`persona-theory.md`](.claude/skills/persona-write/docs/persona-theory.md). You can add your own.
@@ -84,6 +87,9 @@ cp -r persona-write/.claude/skills/persona-copy /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-list /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-create /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-brief /your-project/.claude/skills/
+cp -r persona-write/.claude/skills/persona-wordcheck /your-project/.claude/skills/
+cp -r persona-write/.claude/skills/persona-research /your-project/.claude/skills/
+cp -r persona-write/.claude/skills/persona-localize /your-project/.claude/skills/
 ```
 
 See [INSTALL_SKILL.md](INSTALL_SKILL.md) for the full guide including a quick verification step.

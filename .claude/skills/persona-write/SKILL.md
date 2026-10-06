@@ -50,6 +50,8 @@ Estimate target length from the user's brief. If the user explicitly asks for th
 
 Run all passes in-context. Return the result inline with a one or two sentence note on the main adjustments. No folder is created.
 
+`sentence-build` still applies in this mode: keep the skeleton and the sentence log in context, build one sentence at a time, and show both as a compact numbered list under the result so the build can be checked.
+
 ### Scratch mode
 
 1. **Create a task folder:** `scratch/YYYY-MM-DD-[task-slug]/`
@@ -181,13 +183,15 @@ The pass sequence (whether materialized to scratch or held in memory):
 3. **Extract intent** — what the text is trying to do, who it is for, what must be preserved.
 4. **Run a diagnostic audit** (persona-fit only) — identify drift from the persona's positive shape. **Do not enumerate generic AI patterns**; see `docs/voice-guide.md`.
 5. **Persona immersion mapping** — stance, word-pool (the persona's Lexical Shunts), structural intent.
-6. **Draft or rewrite** — write through the immersion brief; prioritise internal logic over smooth flow.
+6. **Build sentence by sentence** — plan the claims first, then write, check, and lock one sentence at a time through the immersion brief. Never produce the whole text in one shot. See `passes/sentence-build.md`.
 7. **Voice coherence** — check fit to the persona's positive shape (Identity, Rhythm, Stylometric Signature, Taboo patterns). Apply targeted fixes toward the persona's target. See `passes/voice-coherence.md`.
 8. **Refine** — locally tighten and improve flow without global smoothing.
-9. **Fidelity check** — preserve meaning and nuance.
-10. **Final output** — return inline (or write to `final.md` if scratch is in use).
+9. **Native fluency** — when the target is not English, make the text read as native writing. See `passes/native-fluency.md`.
+10. **Word check** — ask of every word and sentence whether it fits the context and is used correctly in the target language. See `/persona-wordcheck`.
+11. **Fidelity check** — preserve meaning and nuance.
+12. **Final output** — return inline (or write to `final.md` if scratch is in use).
 
-If scratch is in use, write each step to a numbered `.md` file (`01-intent.md` ... `07-fidelity.md`, `final.md`).
+If scratch is in use, write each step to a numbered `.md` file (`01-intent.md` ... `04a-skeleton.md`, `04b-sentences.md` ... `06b-native.md`, `06c-wordcheck.md`, `07-fidelity.md`, `final.md`).
 
 ## Long-form workflow
 
@@ -301,9 +305,11 @@ Preset persona definitions are in:
 - `passes/intent-extraction.md`
 - `passes/diagnostic-audit.md`
 - `passes/persona-mapping.md`
+- `passes/sentence-build.md`
 - `passes/rewrite.md`
 - `passes/voice-coherence.md`
 - `passes/refine.md`
+- `passes/native-fluency.md`
 - `passes/fidelity-check.md`
 
 ### Long-form

@@ -10,6 +10,9 @@ skills:
   - persona-list
   - persona-create
   - persona-brief
+  - persona-localize
+  - persona-research
+  - persona-wordcheck
 ---
 
 # Installing Persona Write
@@ -49,6 +52,9 @@ cp -r persona-write/.claude/skills/persona-copy /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-list /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-create /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-brief /your-project/.claude/skills/
+cp -r persona-write/.claude/skills/persona-wordcheck /your-project/.claude/skills/
+cp -r persona-write/.claude/skills/persona-research /your-project/.claude/skills/
+cp -r persona-write/.claude/skills/persona-localize /your-project/.claude/skills/
 ```
 
 No configuration files. No environment variables. No package installs.
@@ -182,6 +188,9 @@ Create a `.md` file in `personas/` using the schema in `persona-create/template.
 | persona-copy | `persona-copy/SKILL.md` | Extract a writer's style from samples and reproduce a new piece at matched quality |
 | persona-list | `persona-list/SKILL.md` | Browse and explain the available preset personas |
 | persona-create | `persona-create/SKILL.md` | Build a custom persona in plain language |
+| persona-localize | `persona-localize/SKILL.md` | Adapt a text to a target language and locale so it reads as native |
+| persona-research | `persona-research/SKILL.md` | Research genre norms and check claims against sources before writing |
+| persona-wordcheck | `persona-wordcheck/SKILL.md` | Check every word and sentence for fit to the context and correct use in the target language |
 | persona-brief | `persona-brief/SKILL.md` | Build a reader brief (what the reader knows, needs, and should do) before drafting |
 
 **Preset personas:** `sharp-technical`, `pragmatic-builder`, `clear-teacher`, `skeptical-analyst`, `blunt-operator`, `problem-first-marketer`

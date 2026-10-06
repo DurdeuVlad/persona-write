@@ -33,8 +33,8 @@ Produce a short list of concrete problems framed as drift from the persona's pos
 ### 5. Persona mapping (`03-mapping.md`)
 Translate the persona definition into specific decisions for this text — stance, word-pool, structural intent.
 
-### 6. Rewrite (`04-draft.md`)
-Produce the rewritten or drafted text through the persona mapping brief.
+### 6. Build sentence by sentence (`04a-skeleton.md`, `04b-sentences.md`, `04-draft.md`)
+Produce the drafted or rewritten text through the persona mapping brief, one sentence at a time: a skeleton of claims first, then each sentence written, checked, and locked before the next. The text is never produced in one shot. Each locked sentence is logged as it is built, and a connect step joins stacked short sentences before the draft is assembled. See `passes/sentence-build.md`.
 
 ### 7. Voice coherence (`05-coherence.md`)
 Check fit to the persona's positive shape — Identity, Rhythm, Stylometric Signature, Lexical Shunts, Taboo patterns. Apply targeted fixes toward the persona's target. See `../passes/voice-coherence.md`.
@@ -43,6 +43,12 @@ This pass replaces the previous "anti-AI scrub" and the "Unbiased Anti-AI Critic
 
 ### 8. Surgical tightening (`06-refine.md`)
 Locally tighten sentences and improve specific transitions. Sentence-level work only — no global smoothing.
+
+### 8b. Native fluency (`06b-native.md`)
+When the text is in a language other than English, or the user names a target language, rewrite phrases that read as translated into the constructions a native writer would use. Skipped for English-only work. See `passes/native-fluency.md`.
+
+### 8c. Word check (`06c-wordcheck.md`)
+Ask of every sentence, and of every content word in it, whether it fits the context (genre, reader, register) and whether it is used correctly in the target language (meaning, collocation, grammar). Fix what fails; look up what is uncertain. Runs for every language, English included. See the `persona-wordcheck` skill.
 
 ### 9. Fidelity check (`07-fidelity.md`)
 Verify that the rewritten text preserves the meaning of the original.
