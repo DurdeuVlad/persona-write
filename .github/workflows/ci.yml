@@ -27,6 +27,8 @@ jobs:
             grep -q "$b" .claude/skills/persona-list/SKILL.md || { echo "persona-list missing $b"; exit 1; }
           done
           echo "$n personas OK"
+      - name: Proofread script self-check
+        run: python3 .claude/skills/persona-write/scripts/test_proofread.py
       - name: Versions agree
         run: |
           v=$(node -p "require('./package.json').version")

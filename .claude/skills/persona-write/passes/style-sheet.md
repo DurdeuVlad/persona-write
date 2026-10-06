@@ -4,7 +4,7 @@
 
 Keep one written record of the decisions this document has made, so every later pass applies the same decisions instead of making them again.
 
-Opened at step 3 (intent extraction), read by the passes that make or check choices on terms, names, numbers, register, and spelling (`sentence-build`, `refine`, `native-fluency`, `persona-wordcheck`, `fidelity-check`), and added to as new decisions come up. For long-form work it is the single record of terminology and naming, opened at Stage 0 with the global brief and shared by all sections.
+Opened at step 3 (intent extraction), read by the passes that make or check choices on terms, names, numbers, register, and spelling (`sentence-build`, `refine`, `native-fluency`, `persona-wordcheck`, `fidelity-check`, `proofread`), and added to as new decisions come up. For long-form work it is the single record of terminology and naming, opened at Stage 0 with the global brief and shared by all sections.
 
 ## The writer this pass makes
 
