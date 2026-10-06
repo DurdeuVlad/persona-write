@@ -4,6 +4,12 @@ All notable changes to this project will be documented here.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2.3.0] - 2026-10-06
+
+### Added
+
+- `persona-brief` skill: a pre-draft reader brief (reader, what they know, what they lack, order, action, stakes) plus a reader check. Persona sets the voice; the brief sets the content and its order.
+
 ## [2.2.2] - 2026-10-05
 
 ### Changed

@@ -1,6 +1,6 @@
 {
   "name": "persona-write",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "Agent skills for drafting, rewriting, and reviewing text through a specific writing persona.",
   "keywords": ["agent-skills", "claude-code", "skills", "writing", "persona"],
   "author": "Dwurdy Studios",

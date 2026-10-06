@@ -8,7 +8,7 @@ Give Claude Code a persona and it writes from that person's point of view — th
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-skill-blue)](https://claude.ai/code)
-[![Version](https://img.shields.io/badge/version-2.2.2-green)]()
+[![Version](https://img.shields.io/badge/version-2.3.0-green)]()
 
 </div>
 
@@ -36,13 +36,14 @@ Everything in this project follows from that claim — the pipeline runs persona
 
 ## What you get
 
-A Claude Code skill set with five commands:
+A Claude Code skill set with six commands:
 
 - **`/persona-write`** — draft, rewrite, audit, or refine text in a target persona; supports multi-persona chains
 - **`/persona-review`** — review text through a specific reviewer persona, applying targeted surgical fixes
 - **`/persona-copy`** — extract a writer's style from sample texts and reproduce a new piece at matched quality, verified against a research-backed rubric
 - **`/persona-list`** — browse the available personas with plain-English descriptions
 - **`/persona-create`** — describe what you need in plain language and build a custom persona
+- **`/persona-brief`** — build a short reader brief (what the reader knows, needs, and should do) before drafting
 
 Seven personas ship with the repo. Each is grounded in stylometry, writing-quality rubrics, rhetoric, and personality–linguistics research — see [`persona-theory.md`](.claude/skills/persona-write/docs/persona-theory.md). You can add your own.
 
@@ -82,6 +83,7 @@ cp -r persona-write/.claude/skills/persona-review /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-copy /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-list /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-create /your-project/.claude/skills/
+cp -r persona-write/.claude/skills/persona-brief /your-project/.claude/skills/
 ```
 
 See [INSTALL_SKILL.md](INSTALL_SKILL.md) for the full guide including a quick verification step.
@@ -238,6 +240,7 @@ Why length-driven and not always-on: see [`voice-guide.md`](.claude/skills/perso
 
   persona-list/     ← browse and explain personas
   persona-create/   ← build a custom persona, research-backed schema
+  persona-brief/    ← reader brief before drafting: who reads, what they know, what they must do
 ```
 
 The research foundation lives in [`.claude/skills/persona-write/docs/persona-theory.md`](.claude/skills/persona-write/docs/persona-theory.md) and the verification rubric in [`.claude/skills/persona-write/docs/writing-quality-rubric.md`](.claude/skills/persona-write/docs/writing-quality-rubric.md). Both are referenced by every persona file and by `persona-copy`.
