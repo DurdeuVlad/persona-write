@@ -58,7 +58,7 @@ Verify that the rewritten text preserves the meaning of the original.
 Only output text that passes this check.
 
 ### 12. Proofread (`08-proofread.md`)
-Read the finished text as it will appear in the reader's form: length as the form counts it, plain text or formatting, spacing, doubled words, the language's characters. Mechanical fixes only. See `../passes/proofread.md` and `scripts/proofread.py`.
+Read the finished text as it will appear in the reader's form: length as the form counts it, plain text or formatting, spacing, doubled words, the language's characters. Mechanical fixes only. See `../passes/proofread.md` and `../scripts/proofread.py`.
 
 ### 13. Final assembly (`final.md` if scratch is in use)
 Return the final version to the user.
