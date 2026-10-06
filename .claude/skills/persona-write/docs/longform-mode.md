@@ -59,7 +59,7 @@ After all sections are complete, a consistency review is recorded in `consistenc
 
 ### Final assembly
 
-Assemble the revised sections into the final Markdown document: `final.md`. Then run the proofread pass (`../passes/proofread.md`) on it.
+Assemble the revised sections into the final Markdown document: `final.md`. Then run the cold-reader pass (`../passes/cold-reader.md`, when the stakes call for it) and the proofread pass (`../passes/proofread.md`) on it.
 
 ## Output
 
