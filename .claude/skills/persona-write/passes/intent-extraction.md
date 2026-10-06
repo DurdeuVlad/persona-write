@@ -31,6 +31,8 @@ Who is this written for?
 
 This affects compression, vocabulary, and how much context to include.
 
+If the reader may not share the author's context, run `/persona-brief` first and use its brief as the audience and purpose input.
+
 ### Must-keep content
 What must survive the rewrite?
 

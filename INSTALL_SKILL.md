@@ -2,13 +2,14 @@
 name: persona-write
 description: Install this skill set to draft, rewrite, audit, and refine text through a specific writing persona using a multi-pass workflow. Handles both short text and long-form documents.
 install: npx skills add DurdeuVlad/persona-write
-version: 2.2.2
+version: 2.3.0
 skills:
   - persona-write
   - persona-review
   - persona-copy
   - persona-list
   - persona-create
+  - persona-brief
 ---
 
 # Installing Persona Write
@@ -47,6 +48,7 @@ cp -r persona-write/.claude/skills/persona-review /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-copy /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-list /your-project/.claude/skills/
 cp -r persona-write/.claude/skills/persona-create /your-project/.claude/skills/
+cp -r persona-write/.claude/skills/persona-brief /your-project/.claude/skills/
 ```
 
 No configuration files. No environment variables. No package installs.
@@ -90,6 +92,7 @@ cp -r .claude/skills/persona-review /your-project/.claude/skills/
 cp -r .claude/skills/persona-copy /your-project/.claude/skills/
 cp -r .claude/skills/persona-list /your-project/.claude/skills/
 cp -r .claude/skills/persona-create /your-project/.claude/skills/
+cp -r .claude/skills/persona-brief /your-project/.claude/skills/
 ```
 
 ---
@@ -109,6 +112,7 @@ The system lives entirely in `.claude/skills/`. Copy that folder wherever your a
   persona-copy/      ← extract a writer's style from samples and reproduce it
   persona-list/      ← optional, helps the agent explain available personas
   persona-create/    ← optional, helps users build custom personas
+  persona-brief/     ← optional, builds a reader brief before drafting
 ```
 
 **Minimum viable install:** copy just `persona-write/` and point your agent at `persona-write/SKILL.md` as the entry point.
@@ -178,6 +182,7 @@ Create a `.md` file in `personas/` using the schema in `persona-create/template.
 | persona-copy | `persona-copy/SKILL.md` | Extract a writer's style from samples and reproduce a new piece at matched quality |
 | persona-list | `persona-list/SKILL.md` | Browse and explain the available preset personas |
 | persona-create | `persona-create/SKILL.md` | Build a custom persona in plain language |
+| persona-brief | `persona-brief/SKILL.md` | Build a reader brief (what the reader knows, needs, and should do) before drafting |
 
 **Preset personas:** `sharp-technical`, `pragmatic-builder`, `clear-teacher`, `skeptical-analyst`, `blunt-operator`, `problem-first-marketer`
 
