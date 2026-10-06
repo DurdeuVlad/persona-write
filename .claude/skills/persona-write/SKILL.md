@@ -50,7 +50,7 @@ Estimate target length from the user's brief. If the user explicitly asks for th
 
 Run all passes in-context. Return the result inline with a one or two sentence note on the main adjustments. No folder is created.
 
-`sentence-build` still applies in this mode: keep the skeleton and the sentence log in context, build one sentence at a time, and show both as a compact numbered list under the result so the build can be checked.
+`sentence-build` still applies in this mode: keep the skeleton, the sentence log, and the style sheet in context, build one sentence at a time, and show all three as compact lists under the result so the build can be checked.
 
 ### Scratch mode
 
@@ -180,7 +180,7 @@ The pass sequence (whether materialized to scratch or held in memory):
 
 1. **Resolve persona** — load the persona file. Hold its Identity, Rhythm, and Stylometric Signature as the brief.
 2. **Infer mode** — draft / rewrite / audit / refine / longform.
-3. **Extract intent and open the style sheet** — what the text is trying to do, who it is for, what must be preserved; record the decisions on terms, names, numbers, and register in `00-style-sheet.md`. Every later pass reads it. See `passes/style-sheet.md`.
+3. **Extract intent and open the style sheet** — what the text is trying to do, who it is for, what must be preserved; record the decisions on terms, names, numbers, and register in `00-style-sheet.md`. The editing and checking passes read it. See `passes/style-sheet.md`.
 4. **Run a diagnostic audit** (persona-fit only) — identify drift from the persona's positive shape. **Do not enumerate generic AI patterns**; see `docs/voice-guide.md`.
 5. **Persona immersion mapping** — stance, word-pool (the persona's Lexical Shunts), structural intent.
 6. **Build sentence by sentence** — plan the claims first, then write, check, and fix one sentence at a time through the immersion brief. The text grows one sentence at a time from the skeleton. See `passes/sentence-build.md`.
@@ -191,7 +191,7 @@ The pass sequence (whether materialized to scratch or held in memory):
 11. **Fidelity check** — preserve meaning and nuance.
 12. **Final output** — return inline (or write to `final.md` if scratch is in use).
 
-If scratch is in use, write each step to a numbered `.md` file (`01-intent.md` ... `04a-skeleton.md`, `04b-sentences.md` ... `06b-native.md`, `06c-wordcheck.md`, `07-fidelity.md`, `final.md`).
+If scratch is in use, write each step to a numbered `.md` file (`01-intent.md` ... `04a-skeleton.md`, `04b-sentences.md` ... `06b-native.md`, `06c-wordcheck.md`, `07-fidelity.md`, `final.md`; plus `00-style-sheet.md`).
 
 ## Long-form workflow
 

@@ -54,6 +54,7 @@ Markdown is the canonical working format.
 
 ## File naming in scratch folder
 
+- `00-style-sheet.md`
 - `01-intent.md`
 - `02-audit.md`
 - `03-mapping.md`

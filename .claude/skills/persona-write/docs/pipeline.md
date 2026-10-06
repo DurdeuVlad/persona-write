@@ -23,7 +23,7 @@ Determine what the user wants to do.
 Ask only if genuinely unclear.
 
 ### 3. Intent extraction and style sheet (`01-intent.md`, `00-style-sheet.md` if scratch is in use)
-Understand what the text is trying to do, who it is for, what must be preserved. Open the style sheet with the decisions already made on terms, names, numbers, and register; every later step reads it and adds to it. See `../passes/style-sheet.md`.
+Understand what the text is trying to do, who it is for, what must be preserved. Open the style sheet with the decisions already made on terms, names, numbers, and register; the passes that edit and check text read it and add to it. See `../passes/style-sheet.md`.
 
 Optional inputs before this step: `/persona-research` saves `00-research.md` (genre norms and a claim table) and `/persona-brief` saves the reader brief. Step 3 reads them when present.
 

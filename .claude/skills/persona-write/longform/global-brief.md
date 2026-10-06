@@ -8,7 +8,7 @@ Before any section is touched, the global brief establishes what the document is
 
 Without a global brief, persona and voice drift by section three.
 
-The style sheet (`00-style-sheet.md`, see `../passes/style-sheet.md`) sits beside the brief and carries its locked terminology and naming decisions.
+Terminology, names, numbers, and register decisions live in one document-level style sheet (`00-style-sheet.md`, see `../passes/style-sheet.md`), opened at Stage 0 together with this brief. Sections share that one sheet.
 
 ## What to include
 
@@ -61,7 +61,7 @@ Things the document should or should not sound like.
 - anything the writer has explicitly stated
 
 ### Locked terminology
-Terms that have specific meanings in this document and must not be changed or substituted.
+Terms that have specific meanings in this document and must not be changed or substituted. They are recorded as Terms rows in the style sheet; this section points there.
 
 Technical documents often depend on precise term use. Changing "authentication" to "login" may feel like a simplification but may change meaning. Lock the important ones here.
 

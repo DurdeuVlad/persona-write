@@ -62,4 +62,4 @@ Are there constraints on what the rewrite can do?
 
 This pass does not produce rewritten text. It produces a working understanding that shapes all the passes that follow.
 
-In long-form mode, record the intent extraction in the global brief or the chapter memory artifact. In short-form mode, keep it as internal context.
+In long-form mode, record the intent extraction in the global brief or the chapter memory artifact. In short-form mode, keep it as internal context. Record the decisions it makes on terms, names, numbers, and register in the style sheet (`style-sheet.md`).
