@@ -58,7 +58,7 @@ Verify that the rewritten text preserves the meaning of the original.
 Only output text that passes this check.
 
 ### 12. Cold reader (`07b-cold-reader.md`)
-When the stakes are high or the user asks: give a fresh reader only the text, the reader role, and the form's question, and ask what it understood, what impression it formed of the author, and where it stumbled. Compare with the intent and fix the differences. See `../passes/cold-reader.md`.
+When the reader decides something about the author or the purpose (an application, a bid, an appeal), or the user asks: give a fresh reader only the text, the reader role, and the form's question, and ask what it understood, what impression it formed of the author, and where it stumbled. Compare with the intent and fix the differences. See `../passes/cold-reader.md`.
 
 ### 13. Proofread (`08-proofread.md`)
 Read the finished text as it will appear in the reader's form: length as the form counts it, plain text or formatting, spacing, doubled words, the language's characters. Mechanical fixes only. See `../passes/proofread.md` and `../scripts/proofread.py`.

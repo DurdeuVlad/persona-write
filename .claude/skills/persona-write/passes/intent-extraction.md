@@ -33,6 +33,9 @@ This affects compression, vocabulary, and how much context to include.
 
 If the reader may not share the author's context, run `/persona-brief` first and use its brief as the audience and purpose input.
 
+### Intended impression
+What should the reader think of the author or the text after reading? Record it; the cold-reader pass compares the reader's report with it.
+
 ### Must-keep content
 What must survive the rewrite?
 

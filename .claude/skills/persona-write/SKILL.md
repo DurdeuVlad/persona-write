@@ -189,7 +189,7 @@ The pass sequence (whether materialized to scratch or held in memory):
 9. **Native fluency** — when the target is not English, make the text read as native writing. See `passes/native-fluency.md`.
 10. **Word check** — ask of every word and sentence whether it fits the context and is used correctly in the target language. See `/persona-wordcheck`.
 11. **Fidelity check** — preserve meaning and nuance.
-12. **Cold reader** — when the stakes are high or the user asks: a fresh reader with only the text reports what it understood, the impression of the author, and where it stumbled. See `passes/cold-reader.md`.
+12. **Cold reader** — when the reader decides something about the author or the purpose (an application, a bid, an appeal), or the user asks: a fresh reader with only the text reports what it understood, the impression of the author, and where it stumbled. See `passes/cold-reader.md`.
 13. **Proofread** — read the finished text as it will appear in the reader's form: length, format, spacing, characters. See `passes/proofread.md`.
 14. **Final output** — return inline (or write to `final.md` if scratch is in use).
 

@@ -26,7 +26,7 @@ If the reader or the wanted action is unclear and changes the result, ask one qu
 
 ## The brief
 
-Write these six fields, one to three lines each.
+Write these seven fields, one to three lines each.
 
 1. **Reader** — role, and how much attention they will give it.
 2. **Already knows** — context the reader brings. This is what can be left out.
@@ -34,6 +34,7 @@ Write these six fields, one to three lines each.
 4. **Order** — the sequence in which the reader needs things, each item placed after what it depends on.
 5. **Action** — what the reader should do, decide, or believe afterward.
 6. **Stakes and register** — how careful, how long, how formal.
+7. **Impression** — what the reader should think of the author or the text after reading (for example: credible, modest, direct). The cold-reader pass compares the reader's report with this.
 
 ## Workflow
 
