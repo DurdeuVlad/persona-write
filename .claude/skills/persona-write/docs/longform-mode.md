@@ -42,9 +42,10 @@ Each section is processed as a unit. All steps are recorded in the task-specific
    - `[section]-01-intent.md`
    - `[section]-02-audit.md`
    - `[section]-03-mapping.md`
-   - `[section]-04-draft.md`
+   - `[section]-04a-skeleton.md`, `[section]-04b-sentences.md`, `[section]-04-draft.md`
    - `[section]-05-coherence.md`
    - `[section]-06-refine.md`
+   - `[section]-06b-native.md`, `[section]-06c-wordcheck.md`
    - `[section]-07-fidelity.md`
 3. Write a chapter memory artifact (`[section]-memory.md`)
 
