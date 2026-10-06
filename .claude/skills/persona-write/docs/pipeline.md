@@ -57,10 +57,13 @@ Verify that the rewritten text preserves the meaning of the original.
 
 Only output text that passes this check.
 
-### 12. Proofread (`08-proofread.md`)
+### 12. Cold reader (`07b-cold-reader.md`)
+When the reader decides something about the author or the purpose (an application, a bid, an appeal), or the user asks: give a fresh reader only the text, the reader role, and the form's question, and ask what it understood, what impression it formed of the author, and where it stumbled. Compare with the intent and fix the differences. See `../passes/cold-reader.md`.
+
+### 13. Proofread (`08-proofread.md`)
 Read the finished text as it will appear in the reader's form: length as the form counts it, plain text or formatting, spacing, doubled words, the language's characters. Mechanical fixes only. See `../passes/proofread.md` and `../scripts/proofread.py`.
 
-### 13. Final assembly (`final.md` if scratch is in use)
+### 14. Final assembly (`final.md` if scratch is in use)
 Return the final version to the user.
 
 ---
@@ -105,7 +108,7 @@ For each section, run the pipeline and record:
 Whole-document review: persona, tone, terminology, repetition, intro/conclusion alignment, argument flow, open revision tickets in `tickets.md`.
 
 ### Stage 4: Final assembly (`final.md`)
-Assemble the revised sections into the final Markdown document. Then run the proofread pass (`../passes/proofread.md`) on it.
+Assemble the revised sections into the final Markdown document. Then run the cold-reader pass (`../passes/cold-reader.md`, when the stakes call for it) and the proofread pass (`../passes/proofread.md`) on it.
 
 ---
 

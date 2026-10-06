@@ -13,6 +13,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `persona-wordcheck` skill: checks every word and sentence for fit to the context and correct use in the target language; runs in the `persona-write` pipeline after `native-fluency`.
 - `sentence-build` pass: the drafting step now plans the claims first, then writes, checks, logs, and locks one sentence at a time (log appended as built), joins stacked short sentences with the connectives the reader needs, and never lets a detail limit remove a qualifier the reader needs; user-supplied titles and names keep their form. `persona-wordcheck` treats dictionary silence as a prompt to find real usage, and checks coordinated items and first-person register.
 - `style-sheet` pass: one record of decisions on terms, names, numbers, register, and spelling (`00-style-sheet.md`), opened at intent extraction and read and extended by every later pass; includes an example.
+- `cold-reader` pass: a fresh reader with only the text reports what it understood, the impression it formed of the author, and where it stumbled (pipeline step 12, for high-stakes texts; after ISO 24495-1 principle 4).
 - `proofread` pass and `scripts/proofread.py` (with `test_proofread.py`, run in CI): last read of the finished text as it will appear in the reader's form (length, plain text, spacing, repeated words, Romanian diacritics and quotes).
 - `native-fluency` pass in `persona-write`, run automatically after `refine` when the target is not English.
 

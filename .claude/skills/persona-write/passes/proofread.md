@@ -4,7 +4,7 @@
 
 Give the finished text one last read as it will appear in the reader's form: right length, right format, clean spacing, correct characters.
 
-Runs after `fidelity-check` as pipeline step 12, on the text that passed it, and changes only mechanics.
+Runs as pipeline step 13, on the text that passed `fidelity-check` (and the cold reader, when it ran), and changes only mechanics.
 
 ## The writer this pass makes
 

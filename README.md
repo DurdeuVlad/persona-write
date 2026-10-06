@@ -50,7 +50,7 @@ A Claude Code skill set with nine commands:
 
 Seven personas ship with the repo. Each is grounded in stylometry, writing-quality rubrics, rhetoric, and personality–linguistics research — see [`persona-theory.md`](.claude/skills/persona-write/docs/persona-theory.md). You can add your own.
 
-Short text goes through a 7-pass pipeline. Long documents are handled section by section with rolling state, so voice stays consistent from the first page to the last.
+Short text goes through a multi-pass pipeline. Long documents are handled section by section with rolling state, so voice stays consistent from the first page to the last.
 
 V2 adds **persona chain mode**: one persona writes, another reviews and applies targeted fixes, the owner reconciles. You get the substance of one voice sharpened by the perspective of another — without blending them into something generic.
 
@@ -189,17 +189,22 @@ Final output reads as the first persona's work. Reviewers improve it; they do no
 
 → [Chain mode docs](.claude/skills/persona-write/docs/persona-chain-mode.md)
 
-### Short text — 7 passes
+### Short text
 
 | Pass | What it does |
 |---|---|
 | Intent extraction | What is this text trying to do, and for whom |
 | Diagnostic audit | Where the draft drifts from the persona's positive shape |
+| Style sheet | Decisions on terms, names, numbers, register recorded once and reused |
 | Persona mapping | What this persona foregrounds, cuts, asserts |
-| Rewrite | Apply the brief |
+| Sentence build | Skeleton of claims first, then one sentence at a time |
 | Voice coherence | Check fit to the persona's Identity / Rhythm / Stylometric Signature |
 | Refine | Tighten, fix rhythm |
+| Native fluency | Reads as native writing in the target language |
+| Word check | Every word fits the context and is used correctly (`/persona-wordcheck`) |
 | Fidelity check | Meaning and nuance survived |
+| Cold reader | A fresh reader with only the text reports what it understood and how it felt |
+| Proofread | Length, format, spacing, characters as the reader's form counts them |
 
 The pipeline has two modes, decided by length:
 
@@ -229,7 +234,7 @@ Why length-driven and not always-on: see [`voice-guide.md`](.claude/skills/perso
 .claude/skills/
   persona-write/
     personas/       ← 7 preset persona definitions (add your own here)
-    passes/         ← 7 internal pass definitions
+    passes/         ← internal pass definitions
     longform/       ← 6 long-form workflow modules
     dictionaries/   ← banned phrases, manager speak, AI patterns
     docs/           ← philosophy, pipeline, usage, chain mode, anti-AI guidelines

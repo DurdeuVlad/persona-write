@@ -55,7 +55,7 @@ Run all passes in-context. Return the result inline with a one or two sentence n
 ### Scratch mode
 
 1. **Create a task folder:** `scratch/YYYY-MM-DD-[task-slug]/`
-2. **Record each pass to its own numbered `.md` file:** `01-intent.md`, `02-audit.md`, `03-mapping.md`, `04a-skeleton.md`, `04b-sentences.md`, `04-draft.md`, `05-coherence.md`, `06-refine.md`, `06b-native.md`, `06c-wordcheck.md`, `07-fidelity.md`, `08-proofread.md`, `final.md` (and `00-style-sheet.md`, plus `00-research.md` when `/persona-research` ran).
+2. **Record each pass to its own numbered `.md` file:** `01-intent.md`, `02-audit.md`, `03-mapping.md`, `04a-skeleton.md`, `04b-sentences.md`, `04-draft.md`, `05-coherence.md`, `06-refine.md`, `06b-native.md`, `06c-wordcheck.md`, `07-fidelity.md`, `07b-cold-reader.md`, `08-proofread.md`, `final.md` (and `00-style-sheet.md`, plus `00-research.md` when `/persona-research` ran).
 3. The scratch folder is gitignored.
 
 The reasoning, with cross-model experimental evidence, is in `docs/voice-guide.md`. The underlying principle is in `docs/philosophy.md`.
@@ -189,10 +189,11 @@ The pass sequence (whether materialized to scratch or held in memory):
 9. **Native fluency** — when the target is not English, make the text read as native writing. See `passes/native-fluency.md`.
 10. **Word check** — ask of every word and sentence whether it fits the context and is used correctly in the target language. See `/persona-wordcheck`.
 11. **Fidelity check** — preserve meaning and nuance.
-12. **Proofread** — read the finished text as it will appear in the reader's form: length, format, spacing, characters. See `passes/proofread.md`.
-13. **Final output** — return inline (or write to `final.md` if scratch is in use).
+12. **Cold reader** — when the reader decides something about the author or the purpose (an application, a bid, an appeal), or the user asks: a fresh reader with only the text reports what it understood, the impression of the author, and where it stumbled. See `passes/cold-reader.md`.
+13. **Proofread** — read the finished text as it will appear in the reader's form: length, format, spacing, characters. See `passes/proofread.md`.
+14. **Final output** — return inline (or write to `final.md` if scratch is in use).
 
-If scratch is in use, write each step to a numbered `.md` file (`01-intent.md` ... `04a-skeleton.md`, `04b-sentences.md` ... `06b-native.md`, `06c-wordcheck.md`, `07-fidelity.md`, `08-proofread.md`, `final.md`; plus `00-style-sheet.md`).
+If scratch is in use, write each step to a numbered `.md` file (`01-intent.md` ... `04a-skeleton.md`, `04b-sentences.md` ... `06b-native.md`, `06c-wordcheck.md`, `07-fidelity.md`, `07b-cold-reader.md`, `08-proofread.md`, `final.md`; plus `00-style-sheet.md`).
 
 ## Long-form workflow
 
@@ -239,7 +240,7 @@ If a later section changes framing, terminology, or argument shape:
 At the end, check:
 ...
 ### Stage 6: Assemble final output (`final.md`)
-Create the final Markdown document from the revised sections, then run the proofread pass on it.
+Create the final Markdown document from the revised sections, then run the cold-reader pass (when the stakes call for it) and the proofread pass on it.
 
 ## Output handling
 
@@ -313,6 +314,7 @@ Preset persona definitions are in:
 - `passes/refine.md`
 - `passes/native-fluency.md`
 - `passes/fidelity-check.md`
+- `passes/cold-reader.md`
 - `passes/proofread.md`
 
 ### Scripts
