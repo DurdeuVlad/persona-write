@@ -2,7 +2,9 @@
   "name": "persona-write",
   "version": "2.2.2",
   "description": "Draft, rewrite, review, and clone writing voices through specific personas.",
-  "author": { "name": "Dwurdy Studios" },
+  "author": {
+    "name": "Dwurdy Studios"
+  },
   "license": "MIT",
   "repository": "https://github.com/DurdeuVlad/persona-write",
   "skills": [
@@ -11,5 +13,13 @@
     "./.claude/skills/persona-copy",
     "./.claude/skills/persona-list",
     "./.claude/skills/persona-create"
+  ],
+  "icon": "./.claude-plugin/icon.png",
+  "keywords": [
+    "writing",
+    "persona",
+    "style",
+    "editing",
+    "voice"
   ]
 }
