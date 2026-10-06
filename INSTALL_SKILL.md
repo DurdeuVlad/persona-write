@@ -169,6 +169,7 @@ Create a `.md` file in `personas/` using the schema in `persona-create/template.
 8. Native fluency, when the target is not English (`06b-native.md`)
 9. Word check (`06c-wordcheck.md`)
 10. Fidelity check (`07-fidelity.md`)
+11. Proofread (`08-proofread.md`)
 
 **Long-form documents:**
 1. Build global brief & document map in scratch folder

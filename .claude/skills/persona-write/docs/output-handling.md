@@ -66,6 +66,7 @@ Markdown is the canonical working format.
 - `06b-native.md`
 - `06c-wordcheck.md`
 - `07-fidelity.md`
+- `08-proofread.md`
 - `final.md`
 
 For long-form, use section prefixes as described in `pipeline.md`.

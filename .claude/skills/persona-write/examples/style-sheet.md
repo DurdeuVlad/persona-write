@@ -11,7 +11,7 @@ Task: a short formal Romanian motivation text for a university teaching-qualific
 | Terms | "Inteligență Artificială și Viziune" in Romanian | user | The user's own draft uses this form |
 | Numbers | At most two numbers in the text | user | Respect the committee's time |
 | Numbers | The level in "nivelul I" always stays | writer | A qualifier the reader needs to read the fact correctly |
-| Spelling and typography | Full diacritics; program name in quotation marks „…" | source | Romanian orthography guides for formal texts |
+| Spelling and typography | Full diacritics; program name in quotation marks „…” | source | Romanian orthography guides for formal texts |
 | Open questions | Is "primă persoană de contact" the right rendering of the role? | open | Not found in any source |
 
-How the passes use it: `sentence-build` reads the term and number rows before it writes a sentence; `persona-wordcheck` checks flagged words against the Terms rows first; `native-fluency` takes quotation marks and diacritics from the Spelling row; `fidelity-check` reads the Terms, Names, and Numbers rows as part of what the text must still show.
+How the passes use it: `sentence-build` reads the term and number rows before it writes a sentence; `persona-wordcheck` checks flagged words against the Terms rows first; `native-fluency` takes quotation marks and diacritics from the Spelling row; `fidelity-check` reads the Terms, Names, and Numbers rows as part of what the text must still show; `proofread` takes the number limit and the spelling rules from the Numbers and Spelling rows.
